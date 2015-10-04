@@ -14,7 +14,6 @@ class Login: UIViewController, UITextFieldDelegate{
     @IBOutlet var usernameTextField:UITextField!
     
     override func viewDidLoad() {
-        usernameTextField.secureTextEntry = true
         passwordTextField.delegate = self
         usernameTextField.delegate = self
     }
@@ -31,7 +30,7 @@ class Login: UIViewController, UITextFieldDelegate{
             if(error == nil){
                 self.performSegueWithIdentifier("LoginToMain", sender: self)
             }else{
-                println("Login error")
+                print("Login error")
             }
         })
     }

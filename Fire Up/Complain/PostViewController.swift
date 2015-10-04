@@ -59,10 +59,10 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
     }
 
     func rightBarButtonAction(){
-        var post = PFObject(className: "timeline")
+        let post = PFObject(className: "timeline")
         post["text"] = addText.text
         //post["user"] = PFUser.currentUser()
-        let imageData = UIImagePNGRepresentation(addPhoto.currentImage)
+        let imageData = UIImagePNGRepresentation(addPhoto.currentImage!)
         let imageFile = PFFile(name:"image.png", data:imageData)
         post["image"] = imageFile
         post.saveInBackgroundWithBlock(nil)

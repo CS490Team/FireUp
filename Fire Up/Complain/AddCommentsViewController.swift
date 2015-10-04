@@ -48,15 +48,15 @@ class AddCommentsViewController: UIViewController, UITextFieldDelegate{
         return false
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+    /*override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
-        var touches = touches.anyObject() as UITouch
+        var touches = touches.anyObject() as! UITouch
         location = touches.locationInView(self.view)
         preLocation = location
     }
     
     override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-        let touches = touches.anyObject() as UITouch
+        let touches = touches.anyObject() as! UITouch
         location = touches.locationInView(self.view)
         if((theAvatar.frame.origin.x - preLocation!.x + location!.x <= theImage.frame.origin.x)&&(theAvatar.frame.origin.y - (preLocation!.y - location!.y) <= theImage.frame.origin.y)){     //left top
             
@@ -83,7 +83,7 @@ class AddCommentsViewController: UIViewController, UITextFieldDelegate{
             theTextLabel.frame = CGRectOffset(theTextLabel.frame, location!.x - preLocation!.x, location!.y - preLocation!.y)
         }
         preLocation = location
-    }
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -95,7 +95,7 @@ class AddCommentsViewController: UIViewController, UITextFieldDelegate{
     }
     
     func rightBarButtonAction(){
-        println("1")
+        print("1")
     }
     
     func addLeftBarItem(){

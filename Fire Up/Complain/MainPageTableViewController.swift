@@ -15,7 +15,7 @@ class MainPageTableViewController: PFQueryTableViewController{
     var MainPageData = NSDictionary()
     
     required init(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        super.init(coder: aDecoder)!
         self.parseClassName = "timeline"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
@@ -50,14 +50,14 @@ class MainPageTableViewController: PFQueryTableViewController{
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("MainPageCell", forIndexPath: indexPath) as MainPageTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("MainPageCell", forIndexPath: indexPath) as! MainPageTableViewCell
         cell.TheImage.frame = CGRectMake(0, 0, 320, 250)
         cell.TheImage.image = UIImage(named: "1421031790_Picture")
-        let photo: PFObject = self.objects[indexPath.row] as PFObject
-        let photoAttributes = getAttributesForPhoto(photo)
+        //let photo: PFObject = self.objects[indexPath.row] as! PFObject
+        //let photoAttributes = getAttributesForPhoto(photo)
         
         
-        cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as PFFile
+        cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         cell.TheImage.loadInBackground(nil)
         
         /*if(photoAttributes == nil){
@@ -77,10 +77,10 @@ class MainPageTableViewController: PFQueryTableViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "toComment"){
-            let VC = segue.destinationViewController as AddCommentsViewController
+            let VC = segue.destinationViewController as! AddCommentsViewController
             let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
             let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
-            let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as MainPageTableViewCell
+            let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
             VC.TRImage = cell.TheImage.image
         }
     }
