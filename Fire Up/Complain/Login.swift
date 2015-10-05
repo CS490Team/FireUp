@@ -21,7 +21,13 @@ class Login: UIViewController, UITextFieldDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+       
+        return true
+    }
     @IBAction func login(sender: AnyObject){
         let username = usernameTextField.text
         let password = passwordTextField.text
