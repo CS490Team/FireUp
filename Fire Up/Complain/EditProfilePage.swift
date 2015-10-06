@@ -41,11 +41,11 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
     }
     @IBAction func UpdateProfile(sender: AnyObject) {
         currentUser = PFUser.currentUser()
-        var profileImageData = UIImageJPEGRepresentation(user_profile_image.image!, 1)
+        let profileImageData = UIImageJPEGRepresentation(user_profile_image.image!, 1)
         
         if(profileImageData != nil){
             let profileFileObject = PFFile(data: profileImageData)
-            currentUser.setObject(profileImageData, forKey: "User_Profile_Picture")
+            currentUser.setObject(profileFileObject, forKey: "User_Profile_Picture")
         }
         if(firstNameTextField.text != nil){
             currentUser.setObject(firstNameTextField.text, forKey: "FirstName")
@@ -59,11 +59,12 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
         if(passwordTextField.text != nil){
             currentUser.password = passwordTextField.text
         }
-        currentUser.saveInBackgroundWithBlock (success: Bool, error:NSError?) -> Void in
-            
-        
+        currentUser.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
+            if(success){
+                print("update Profile")
+            }
         }
-    
+        
         
     }
 }

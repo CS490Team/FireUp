@@ -25,7 +25,7 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
         currentUser = PFUser.currentUser().username
         print(currentUser)
         username.text = "Username: " + currentUser
-        email.text = "Email: "+PFUser.currentUser().email
+        //email.text = "Email: "+PFUser.currentUser().email
     }
 
     override func didReceiveMemoryWarning() {
