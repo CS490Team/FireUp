@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E012D641BC1CC520011B4D1 /* SignUp.swift */; };
+		7E66F6C41BC36E1C00B99C17 /* EditProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E66F6C31BC36E1C00B99C17 /* EditProfilePage.swift */; settings = {ASSET_TAGS = (); }; };
 		B169EFF61A62FAF600920072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169EFF51A62FAF600920072 /* AppDelegate.swift */; };
 		B169EFF91A62FAF600920072 /* Complain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B169EFF71A62FAF600920072 /* Complain.xcdatamodeld */; };
 		B169EFFE1A62FAF600920072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169EFFC1A62FAF600920072 /* Main.storyboard */; };
@@ -54,6 +55,7 @@
 
 /* Begin PBXFileReference section */
 		7E012D641BC1CC520011B4D1 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		7E66F6C31BC36E1C00B99C17 /* EditProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EditProfilePage.swift; path = ../EditProfilePage.swift; sourceTree = "<group>"; };
 		B169EFF01A62FAF600920072 /* Complain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Complain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B169EFF41A62FAF600920072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B169EFF51A62FAF600920072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				B169EFF51A62FAF600920072 /* AppDelegate.swift */,
+				7E66F6C31BC36E1C00B99C17 /* EditProfilePage.swift */,
 				B169EFFC1A62FAF600920072 /* Main.storyboard */,
 				7E012D641BC1CC520011B4D1 /* SignUp.swift */,
 				B169F03C1A62FEF500920072 /* MainPageTableViewController.swift */,
@@ -333,6 +336,7 @@
 				B169F03F1A62FF0900920072 /* MainPageTableViewCell.swift in Sources */,
 				B1B09D451A65F6C50092F109 /* DetailViewController.swift in Sources */,
 				B169EFF61A62FAF600920072 /* AppDelegate.swift in Sources */,
+				7E66F6C41BC36E1C00B99C17 /* EditProfilePage.swift in Sources */,
 				B1DDB02B1A68B9DD00BE60E7 /* Login.swift in Sources */,
 				B169F03D1A62FEF500920072 /* MainPageTableViewController.swift in Sources */,
 				B1F09A321A684808003DA14A /* ExImageView.m in Sources */,

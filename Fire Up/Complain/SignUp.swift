@@ -47,20 +47,18 @@ class SignUp: UIViewController, UITextFieldDelegate{
         new_user.password = password.text
         new_user.email = email.text
         new_user.signUpInBackgroundWithBlock{ (success: Bool, error:NSError?) -> Void in
-            var userMessage = "Sign up is successful, Please Go Back to Login page"
+            var userMessage = "Sign up is successful"
             if(success == false){
                 userMessage = "Error"
             }
-            let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            var alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
             let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
                 if(success == true){
+                    
                 }
             }
             alert.addAction(action)
             self.presentViewController(alert, animated: true, completion: nil)
-            
-            
-            
         }
     }
 }

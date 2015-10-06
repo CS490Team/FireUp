@@ -157,11 +157,11 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="315"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7wu-xq-El2" id="Qtj-5O-JrR">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="314.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
-                                            <rect key="frame" x="0.0" y="0.0" width="2240" height="2118.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="2240" height="2119"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LZa-OV-kRL">
@@ -332,7 +332,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F2R-b5-0u6">
-                                <rect key="frame" x="202" y="469" width="49" height="30"/>
+                                <rect key="frame" x="136" y="478" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -341,31 +341,139 @@
                                     <action selector="Signout:" destination="DWW-0s-Rk5" eventType="touchUpInside" id="BfR-uN-UdY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QzE-dn-Cvc">
-                                <rect key="frame" x="70" y="469" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Edit"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hBE-Ng-e6a">
-                                <rect key="frame" x="153" y="95" width="147" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="niQ-RF-eNP">
+                                <rect key="frame" x="32" y="299" width="256" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pfY-RG-J92">
+                                <rect key="frame" x="32" y="341" width="256" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="thM-yg-zBX">
+                                <rect key="frame" x="32" y="383" width="256" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cxh-Rt-i7t">
+                                <rect key="frame" x="32" y="257" width="256" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QzE-dn-Cvc">
+                                <rect key="frame" x="207" y="149" width="75" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <state key="normal" title="Edit Profile"/>
+                                <connections>
+                                    <segue destination="tpi-sV-B4x" kind="push" id="EKS-go-H9C"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="WHR-E3-CVm">
+                                <rect key="frame" x="24" y="98" width="161" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xxv-au-Icj"/>
                     <connections>
-                        <outlet property="LabelTest" destination="hBE-Ng-e6a" id="8AJ-Dc-cbU"/>
+                        <outlet property="FirstName" destination="pfY-RG-J92" id="pD6-KS-jxT"/>
+                        <outlet property="LastName" destination="thM-yg-zBX" id="mGq-HO-Ach"/>
                         <outlet property="LogoutButton" destination="F2R-b5-0u6" id="fDv-bT-cz8"/>
+                        <outlet property="email" destination="niQ-RF-eNP" id="Mw1-dr-vlH"/>
+                        <outlet property="user_profile_image" destination="WHR-E3-CVm" id="aOz-rf-kz2"/>
+                        <outlet property="username" destination="cxh-Rt-i7t" id="c9k-IK-5td"/>
                         <segue destination="Nhz-3R-PGx" kind="push" identifier="ProfileToLogin" id="9L0-x8-C0k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S8v-kI-ivb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="778" y="1481"/>
+        </scene>
+        <!--Edit Profile Page-->
+        <scene sceneID="V0k-yB-zPH">
+            <objects>
+                <viewController id="tpi-sV-B4x" customClass="EditProfilePage" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dm1-O9-ay6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="fum-nQ-Qxl">
+                                <rect key="frame" x="20" y="72" width="161" height="132"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wR6-pS-eok">
+                                <rect key="frame" x="196" y="123" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit Profile Photo"/>
+                                <connections>
+                                    <action selector="SelectProfile:" destination="tpi-sV-B4x" eventType="touchUpInside" id="8dQ-nY-PZS"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" id="Apb-d8-vD1">
+                                <rect key="frame" x="24" y="224" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" id="feJ-Qf-CjZ">
+                                <rect key="frame" x="24" y="269" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="pOP-bS-M5T">
+                                <rect key="frame" x="24" y="312" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="zhm-ko-F0i">
+                                <rect key="frame" x="24" y="355" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hzC-0L-qYs">
+                                <rect key="frame" x="138" y="479" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="UpdateProfile:" destination="tpi-sV-B4x" eventType="touchUpInside" id="Gj2-0O-mhL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ConfirmPassword" textAlignment="natural" minimumFontSize="17" id="RCx-U2-npl">
+                                <rect key="frame" x="24" y="398" width="273" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RWL-56-FBu"/>
+                    <connections>
+                        <outlet property="EmailTextField" destination="pOP-bS-M5T" id="9Lg-42-zCB"/>
+                        <outlet property="confirmPasswordTextField" destination="RCx-U2-npl" id="39G-Fy-Zpi"/>
+                        <outlet property="firstNameTextField" destination="Apb-d8-vD1" id="d0S-dq-dYJ"/>
+                        <outlet property="lastNameTextField" destination="feJ-Qf-CjZ" id="jOb-AV-J99"/>
+                        <outlet property="passwordTextField" destination="zhm-ko-F0i" id="tLi-fg-WSf"/>
+                        <outlet property="user_profile_image" destination="fum-nQ-Qxl" id="4a2-Z0-DVL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rbi-Kb-h8X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310" y="2171"/>
         </scene>
         <!--profile-->
         <scene sceneID="bTV-NP-oQ1">
@@ -405,6 +513,25 @@
             </objects>
             <point key="canvasLocation" x="215" y="-1373"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OZm-Kg-vcU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UiL-aX-oJd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="5re-BM-Gdr"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NM8-YZ-Tvv">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tpi-sV-B4x" kind="relationship" relationship="rootViewController" id="aa5-6U-e5f"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AzG-Gs-8h8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="778" y="2171"/>
+        </scene>
     </scenes>
     <resources>
         <image name="1421031790_Picture" width="128" height="128"/>
@@ -414,5 +541,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="MSZ-3c-Rl3"/>
         <segue reference="9L0-x8-C0k"/>
+        <segue reference="EKS-go-H9C"/>
     </inferredMetricsTieBreakers>
 </document>
