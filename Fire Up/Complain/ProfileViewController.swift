@@ -8,10 +8,15 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController,UITextFieldDelegate {
+
+    @IBOutlet var LogoutButton: UIButton!
+    @IBOutlet var LabelTest: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     override func didReceiveMemoryWarning() {

@@ -23,7 +23,7 @@
         <!--Login-->
         <scene sceneID="cOV-ZD-UUe">
             <objects>
-                <viewController id="Nhz-3R-PGx" customClass="Login" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Nhz-3R-PGx" customClass="Login" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oi6-tW-4L9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -332,7 +332,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F2R-b5-0u6">
-                                <rect key="frame" x="136" y="269" width="49" height="30"/>
+                                <rect key="frame" x="202" y="469" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -341,11 +341,25 @@
                                     <action selector="Signout:" destination="DWW-0s-Rk5" eventType="touchUpInside" id="BfR-uN-UdY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QzE-dn-Cvc">
+                                <rect key="frame" x="70" y="469" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Edit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hBE-Ng-e6a">
+                                <rect key="frame" x="153" y="95" width="147" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xxv-au-Icj"/>
                     <connections>
+                        <outlet property="LabelTest" destination="hBE-Ng-e6a" id="8AJ-Dc-cbU"/>
+                        <outlet property="LogoutButton" destination="F2R-b5-0u6" id="fDv-bT-cz8"/>
                         <segue destination="Nhz-3R-PGx" kind="push" identifier="ProfileToLogin" id="9L0-x8-C0k"/>
                     </connections>
                 </viewController>
@@ -399,6 +413,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="MSZ-3c-Rl3"/>
-        <segue reference="NcJ-pV-VjR"/>
+        <segue reference="9L0-x8-C0k"/>
     </inferredMetricsTieBreakers>
 </document>

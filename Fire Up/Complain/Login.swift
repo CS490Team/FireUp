@@ -36,7 +36,12 @@ class Login: UIViewController, UITextFieldDelegate{
             if(error == nil){
                 self.performSegueWithIdentifier("LoginToMain", sender: self)
             }else{
-                print("Login error")
+                let userMessage = "Login Error"
+                let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+                }
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
             }
         })
     }
