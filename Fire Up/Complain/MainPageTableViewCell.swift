@@ -11,4 +11,5 @@ class MainPageTableViewCell: UITableViewCell {
     
     @IBOutlet var TheImage: PFImageView! = PFImageView()
 
+    @IBOutlet weak var TheText: UITextView!
 }

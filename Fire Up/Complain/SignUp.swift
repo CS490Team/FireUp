@@ -59,19 +59,6 @@ class SignUp: UIViewController, UITextFieldDelegate{
             test = false
         }
         
-        /*if(isEqual(password.text == confirm_password.text)){
-            print("match")
-        }else{
-            print(password.text)
-            print(confirm_password.text)
-            let userMessage = "Password not Match"
-            let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
-            let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
-            }
-            alert.addAction(action)
-            self.presentViewController(alert, animated: true, completion: nil)
-            test = false
-        }*/
         
         new_user.email = email.text
         if(test == true){
