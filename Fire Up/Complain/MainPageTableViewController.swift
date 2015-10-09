@@ -2,7 +2,6 @@
 //  MainPageTableViewController.swift
 //  Complain
 //
-//  Created by sunkai on 1/11/15.
 //  Copyright (c) 2015 sunkai. All rights reserved.
 //
 
@@ -16,7 +15,7 @@ class MainPageTableViewController: PFQueryTableViewController{
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
-        self.parseClassName = "timeline"
+        self.parseClassName = "feed"
         self.pullToRefreshEnabled = true
         self.paginationEnabled = true
         self.objectsPerPage = 15
@@ -53,13 +52,13 @@ class MainPageTableViewController: PFQueryTableViewController{
         let cell = tableView.dequeueReusableCellWithIdentifier("MainPageCell", forIndexPath: indexPath) as! MainPageTableViewCell
         cell.TheImage.frame = CGRectMake(0, 0, 320, 250)
         cell.TheImage.image = UIImage(named: "1421031790_Picture")
-        //let photo: PFObject = self.objects[indexPath.row] as! PFObject
+        let photo: PFObject = self.objects[indexPath.row] as! PFObject
+        
         //let photoAttributes = getAttributesForPhoto(photo)
         
         
-        //cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
+        cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         cell.TheImage.loadInBackground(nil)
-        
         /*if(photoAttributes == nil){
             setAttributes(photo)
             println("1")
