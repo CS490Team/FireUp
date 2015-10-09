@@ -13,15 +13,28 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
     @IBOutlet var confirmPasswordTextField: UITextField!
     @IBOutlet var firstNameTextField: UITextField!
     @IBOutlet var lastNameTextField: UITextField!
-    @IBOutlet var EmailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var user_profile_image: UIImageView!
     var currentUser: PFUser!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentUserString = PFUser.currentUser().username
+        currentUserString = PFUser.currentUser()!.username
         currentUser = PFUser.currentUser()
+        
+        if(PFUser.currentUser()?.objectForKey("FirstName") != nil){
+            let temp = PFUser.currentUser().objectForKey("FirstName") as! String
+            firstNameTextField.text = temp
+        }
+        if(PFUser.currentUser()?.objectForKey("LastName") != nil){
+            lastNameTextField.text = PFUser.currentUser().objectForKey("LastName") as! String
+        }
+        if(PFUser.currentUser()?.objectForKey("User_Profile_Picture") != nil){
+            let userImageProfile = PFUser.currentUser()?.objectForKey("User_Profile_Picture") as! PFFile
+            userImageProfile.getDataInBackgroundWithBlock{ (imageData: NSData?, error:NSError?) -> Void in
+                self.user_profile_image.image = UIImage(data: imageData!)
+            }
+        }
 
         print(currentUserString)
     }
@@ -41,20 +54,17 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
     }
     @IBAction func UpdateProfile(sender: AnyObject) {
         currentUser = PFUser.currentUser()
-        let profileImageData = UIImageJPEGRepresentation(user_profile_image.image!, 1)
-        
-        if(profileImageData != nil){
-            let profileFileObject = PFFile(data: profileImageData)
-            currentUser.setObject(profileFileObject, forKey: "User_Profile_Picture")
+        if(user_profile_image.image != nil){
+            let profileImageData = UIImageJPEGRepresentation(user_profile_image.image!, 1)
+            let profileFileObject = PFFile(data: profileImageData!)
+            currentUser.setObject(profileFileObject!, forKey: "User_Profile_Picture")
         }
+        
         if(firstNameTextField.text != nil){
-            currentUser.setObject(firstNameTextField.text, forKey: "FirstName")
+            currentUser.setObject(firstNameTextField.text!, forKey: "FirstName")
         }
         if(lastNameTextField.text != nil){
-            currentUser.setObject(lastNameTextField.text, forKey: "LastName")
-        }
-        if(EmailTextField.text != nil){
-            currentUser.email = EmailTextField.text
+            currentUser.setObject(lastNameTextField.text!, forKey: "LastName")
         }
         if(passwordTextField.text != nil){
             currentUser.password = passwordTextField.text
@@ -62,6 +72,14 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
         currentUser.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
             if(success){
                 print("update Profile")
+                let userMessage = "ProfileUpdated!"
+                let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+                }
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+                self.performSegueWithIdentifier("ProfilePage", sender: self)
+
             }
         }
         

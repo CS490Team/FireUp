@@ -157,7 +157,7 @@
                                 <rect key="frame" x="0.0" y="22" width="320" height="315"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7wu-xq-El2" id="Qtj-5O-JrR">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="315"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="314.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
@@ -326,7 +326,7 @@
         <!--Profile View Controller-->
         <scene sceneID="URM-CN-Gdf">
             <objects>
-                <viewController id="DWW-0s-Rk5" customClass="ProfileViewController" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfilePage" id="DWW-0s-Rk5" customClass="ProfileViewController" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kpH-fQ-K3L">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -382,6 +382,14 @@
                                 <rect key="frame" x="24" y="98" width="161" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="WjY-cc-jKq">
+                                <rect key="frame" x="214" y="478" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateProfile:" destination="DWW-0s-Rk5" eventType="touchUpInside" id="wD0-9I-hnX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -403,7 +411,7 @@
         <!--Edit Profile Page-->
         <scene sceneID="V0k-yB-zPH">
             <objects>
-                <viewController id="tpi-sV-B4x" customClass="EditProfilePage" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfilePageEdit" id="tpi-sV-B4x" customClass="EditProfilePage" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dm1-O9-ay6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,14 +440,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" id="pOP-bS-M5T">
-                                <rect key="frame" x="24" y="312" width="273" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="zhm-ko-F0i">
-                                <rect key="frame" x="24" y="355" width="273" height="30"/>
+                                <rect key="frame" x="20" y="316" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -453,7 +455,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ConfirmPassword" textAlignment="natural" minimumFontSize="17" id="RCx-U2-npl">
-                                <rect key="frame" x="24" y="398" width="273" height="30"/>
+                                <rect key="frame" x="20" y="360" width="273" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -463,7 +465,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="RWL-56-FBu"/>
                     <connections>
-                        <outlet property="EmailTextField" destination="pOP-bS-M5T" id="9Lg-42-zCB"/>
                         <outlet property="confirmPasswordTextField" destination="RCx-U2-npl" id="39G-Fy-Zpi"/>
                         <outlet property="firstNameTextField" destination="Apb-d8-vD1" id="d0S-dq-dYJ"/>
                         <outlet property="lastNameTextField" destination="feJ-Qf-CjZ" id="jOb-AV-J99"/>

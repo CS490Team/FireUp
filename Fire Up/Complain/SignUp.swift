@@ -41,24 +41,40 @@ class SignUp: UIViewController, UITextFieldDelegate{
         self.save_user()
     }
     
+        
+    
+    
     func save_user(){
+        var test = true;
         let new_user = PFUser()
         new_user.username = username.text
         new_user.password = password.text
-        new_user.email = email.text
-        new_user.signUpInBackgroundWithBlock{ (success: Bool, error:NSError?) -> Void in
-            var userMessage = "Sign up is successful"
-            if(success == false){
-                userMessage = "Error"
-            }
+        if(new_user.password.characters.count<5){
+            var userMessage = "Password has to be at least 5 digits"
             var alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
             let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
-                if(success == true){
-                    
-                }
             }
             alert.addAction(action)
             self.presentViewController(alert, animated: true, completion: nil)
+            test = false
         }
+        
+        new_user.email = email.text
+        if(test == true){
+            new_user.signUpInBackgroundWithBlock{ (success: Bool, error:NSError?) -> Void in
+                var userMessage = "Sign up is successful"
+                if(success == false){
+                    userMessage = "Error, username or email already exist"
+                }
+                var alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+                    if(success == true){
+                    
+                    }
+                }
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
     }
 }

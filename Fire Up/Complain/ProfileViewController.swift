@@ -22,10 +22,14 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentUser = PFUser.currentUser().username
+        currentUser = PFUser.currentUser()!.username
         print(currentUser)
         username.text = "Username: " + currentUser
-        //email.text = "Email: "+PFUser.currentUser().email
+        if(PFUser.currentUser()!.email != nil){
+            let temp = PFUser.currentUser()!.email
+            email.text = "Email: " + temp!
+        }
+        updateUserProfile()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,6 +39,29 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     @IBAction func Signout(sender: AnyObject){
         PFUser.logOut()
         self.performSegueWithIdentifier("ProfileToLogin", sender: self)
+    }
+    @IBAction func updateProfile(sender: AnyObject) {
+        updateUserProfile()
+        
+    }
+    func updateUserProfile(){
+        if(PFUser.currentUser()?.email != nil){
+            email.text = "Email: "+PFUser.currentUser()!.email!
+        }
+        if(PFUser.currentUser()?.objectForKey("FirstName") != nil){
+            let temp = PFUser.currentUser().objectForKey("FirstName") as! String
+            FirstName.text = "First Name: " + temp
+        }
+        if(PFUser.currentUser()?.objectForKey("LastName") != nil){
+            let temp = PFUser.currentUser().objectForKey("LastName") as! String
+            LastName.text = "Last Name: " + temp
+        }
+        if(PFUser.currentUser()?.objectForKey("User_Profile_Picture") != nil){
+            let userImageProfile = PFUser.currentUser()?.objectForKey("User_Profile_Picture") as! PFFile
+            userImageProfile.getDataInBackgroundWithBlock{ (imageData: NSData?, error:NSError?) -> Void in
+                self.user_profile_image.image = UIImage(data: imageData!)
+            }
+        }
     }
     /*@IBAction func SelectProfileImage(sender: AnyObject) {
         var pickerController = UIImagePickerController()

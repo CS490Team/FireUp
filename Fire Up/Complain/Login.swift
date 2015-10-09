@@ -31,7 +31,7 @@ class Login: UIViewController, UITextFieldDelegate{
     @IBAction func login(sender: AnyObject){
         let username = usernameTextField.text
         let password = passwordTextField.text
-        PFUser.logInWithUsernameInBackground(username, password: password, block: {
+        PFUser.logInWithUsernameInBackground(username as String!, password: password as String!, block: {
             (user:PFUser!, error:NSError!)->Void in
             if(error == nil){
                 self.performSegueWithIdentifier("LoginToMain", sender: self)

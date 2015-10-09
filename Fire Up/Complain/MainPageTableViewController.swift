@@ -57,7 +57,7 @@ class MainPageTableViewController: PFQueryTableViewController{
         //let photoAttributes = getAttributesForPhoto(photo)
         
         
-        cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
+        //cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         cell.TheImage.loadInBackground(nil)
         
         /*if(photoAttributes == nil){
@@ -92,7 +92,7 @@ class MainPageTableViewController: PFQueryTableViewController{
     }
     
     func getKeyStringForPhoto(forPhoto: PFObject) -> String{
-        return "photo_" + forPhoto.objectId
+        return "photo_" + forPhoto.objectId!
     }
     
     func getAttributesForPhoto(forPhoto: PFObject) -> NSDictionary?{

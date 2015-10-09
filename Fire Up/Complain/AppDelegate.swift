@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         Parse.setApplicationId("7Kv9Pwno5fHgUJ2WZz99BkZWI1aTRkjq1urmNz3r", clientKey: "RuCwE27Z6wrACTzbxN4KY7t92rlStGcAn9e9RiQM")
-        
+        //PFUser.enableRevocableSessionInBackground()
         /*var testObject:PFObject = PFObject(className: "Test")
         testObject["foo"] = "asd"
         testObject.setObject("!", forKey: "user1")
