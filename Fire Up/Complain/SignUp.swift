@@ -50,14 +50,28 @@ class SignUp: UIViewController, UITextFieldDelegate{
         new_user.username = username.text
         new_user.password = password.text
         if(new_user.password.characters.count<5){
-            var userMessage = "Password has to be at least 5 digits"
-            var alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            let userMessage = "Password has to be at least 5 digits"
+            let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
             let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
             }
             alert.addAction(action)
             self.presentViewController(alert, animated: true, completion: nil)
             test = false
         }
+        
+        /*if(isEqual(password.text == confirm_password.text)){
+            print("match")
+        }else{
+            print(password.text)
+            print(confirm_password.text)
+            let userMessage = "Password not Match"
+            let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+            }
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+            test = false
+        }*/
         
         new_user.email = email.text
         if(test == true){
@@ -66,7 +80,7 @@ class SignUp: UIViewController, UITextFieldDelegate{
                 if(success == false){
                     userMessage = "Error, username or email already exist"
                 }
-                var alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
                 let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
                     if(success == true){
                     

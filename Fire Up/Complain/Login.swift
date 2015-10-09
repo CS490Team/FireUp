@@ -29,9 +29,29 @@ class Login: UIViewController, UITextFieldDelegate{
         return true
     }
     @IBAction func login(sender: AnyObject){
+        var test = true
         let username = usernameTextField.text
         let password = passwordTextField.text
-        PFUser.logInWithUsernameInBackground(username as String!, password: password as String!, block: {
+        if(usernameTextField.text!.isEmpty){
+            let userMessage = "Username empty"
+            let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+            }
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+            test = false;
+        }
+        else if(passwordTextField.text!.isEmpty){
+            let userMessage = "password empty"
+            let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+            }
+            alert.addAction(action)
+            self.presentViewController(alert, animated: true, completion: nil)
+            test = false;
+        }
+        if(test == true){
+            PFUser.logInWithUsernameInBackground(username as String!, password: password as String!, block: {
             (user:PFUser!, error:NSError!)->Void in
             if(error == nil){
                 self.performSegueWithIdentifier("LoginToMain", sender: self)
@@ -44,6 +64,7 @@ class Login: UIViewController, UITextFieldDelegate{
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         })
+        }
     }
     
     @IBAction func signup(sender: AnyObject){

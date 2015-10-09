@@ -27,7 +27,7 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
             firstNameTextField.text = temp
         }
         if(PFUser.currentUser()?.objectForKey("LastName") != nil){
-            lastNameTextField.text = PFUser.currentUser().objectForKey("LastName") as! String
+            lastNameTextField.text = PFUser.currentUser().objectForKey("LastName") as? String
         }
         if(PFUser.currentUser()?.objectForKey("User_Profile_Picture") != nil){
             let userImageProfile = PFUser.currentUser()?.objectForKey("User_Profile_Picture") as! PFFile
@@ -43,7 +43,7 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
     }
     
     @IBAction func SelectProfile(sender: AnyObject) {
-        var pickerController = UIImagePickerController()
+        let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(pickerController, animated: true, completion: nil)
@@ -53,6 +53,7 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     @IBAction func UpdateProfile(sender: AnyObject) {
+        var test = true
         currentUser = PFUser.currentUser()
         if(user_profile_image.image != nil){
             let profileImageData = UIImageJPEGRepresentation(user_profile_image.image!, 1)
@@ -60,20 +61,43 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
             currentUser.setObject(profileFileObject!, forKey: "User_Profile_Picture")
         }
         
-        if(firstNameTextField.text != nil){
+        if(firstNameTextField.text!.isEmpty==false){
             currentUser.setObject(firstNameTextField.text!, forKey: "FirstName")
         }
-        if(lastNameTextField.text != nil){
+        if(lastNameTextField.text!.isEmpty==false){
             currentUser.setObject(lastNameTextField.text!, forKey: "LastName")
         }
-        if(passwordTextField.text != nil){
-            currentUser.password = passwordTextField.text
+        if(passwordTextField.text!.isEmpty==false){
+            if(passwordTextField.text!.characters.count<5){
+                let userMessage = "Password has to be at least 5 digits"
+                let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+                }
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+                test = false
+            }else{
+                currentUser.password = passwordTextField.text
+                print("not empty passwords")
+            }
+            /*if(isEqual(confirmPasswordTextField.text == passwordTextField.text)){
+                print("match")
+            }else{
+                let userMessage = "Password not Match"
+                let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+                }
+                alert.addAction(action)
+                self.presentViewController(alert, animated: true, completion: nil)
+                test = false
+            }*/
         }
+        if(test == true){
         currentUser.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
             if(success){
                 print("update Profile")
                 let userMessage = "ProfileUpdated!"
-                let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "succeed", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
                 let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
                 }
                 alert.addAction(action)
@@ -81,6 +105,7 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
                 self.performSegueWithIdentifier("ProfilePage", sender: self)
 
             }
+        }
         }
         
         

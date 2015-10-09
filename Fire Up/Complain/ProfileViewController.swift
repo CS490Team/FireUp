@@ -19,6 +19,10 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     @IBOutlet var LastName: UILabel!
     var currentUser: String!
     
+    override func viewWillAppear(test: Bool){
+        super.viewWillAppear(true)
+        updateUserProfile()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,16 +49,24 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
         
     }
     func updateUserProfile(){
+        currentUser = PFUser.currentUser()!.username
+        username.text = "Username: " + currentUser
         if(PFUser.currentUser()?.email != nil){
             email.text = "Email: "+PFUser.currentUser()!.email!
+        }else{
+            email.text = "Email: "
         }
         if(PFUser.currentUser()?.objectForKey("FirstName") != nil){
             let temp = PFUser.currentUser().objectForKey("FirstName") as! String
             FirstName.text = "First Name: " + temp
+        }else{
+            FirstName.text = "First Name: "
         }
         if(PFUser.currentUser()?.objectForKey("LastName") != nil){
             let temp = PFUser.currentUser().objectForKey("LastName") as! String
             LastName.text = "Last Name: " + temp
+        }else{
+            LastName.text = "Last Name: "
         }
         if(PFUser.currentUser()?.objectForKey("User_Profile_Picture") != nil){
             let userImageProfile = PFUser.currentUser()?.objectForKey("User_Profile_Picture") as! PFFile
