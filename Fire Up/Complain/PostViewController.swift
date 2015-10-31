@@ -56,11 +56,14 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
         let rightBarItem = UIBarButtonItem(title: "Post", style: UIBarButtonItemStyle.Done, target: self, action: "rightBarButtonAction")
         self.navigationItem.rightBarButtonItem = rightBarItem
     }
+    
+    func resizePic(){
+        
+    }
 
     func rightBarButtonAction(){
-        let post = PFObject(className: "timeline")
+        let post = PFObject(className: "feed")
         post["text"] = addText.text
-        //post["user"] = PFUser.currentUser()
         let imageData = UIImagePNGRepresentation(addPhoto.currentImage!)
         let imageFile = PFFile(name:"image.png", data:imageData!)
         post["image"] = imageFile

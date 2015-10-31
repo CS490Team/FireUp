@@ -15,13 +15,14 @@ class SignUp: UIViewController, UITextFieldDelegate{
     @IBOutlet var password: UITextField!
     @IBOutlet var confirm_password: UITextField!
     @IBOutlet var email: UITextField!
-    
+    @IBOutlet var Slevel: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.username.delegate = self
         self.password.delegate = self
         self.confirm_password.delegate = self
         self.email.delegate = self
+        Slevel.bringSubviewToFront(self.view)
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,6 +35,8 @@ class SignUp: UIViewController, UITextFieldDelegate{
         password.resignFirstResponder()
         confirm_password.resignFirstResponder()
         email.resignFirstResponder()
+        
+        
         return true
     }
     
@@ -41,6 +44,43 @@ class SignUp: UIViewController, UITextFieldDelegate{
         self.save_user()
     }
     
+    /*func textFieldDidBeginEditing(textField: UITextField) {
+        Slevel.setTitleColor(UIColor.redColor(), forState: .Normal)
+        Slevel.setTitle("1", forState: .Normal)
+    }*/
+    
+
+    func textFieldDidEndEditing(textField: UITextField) {
+        if(textField == password){
+            let currentString: NSString = textField.text!
+            if(currentString.length <= 8 ){
+                Slevel.setTitleColor(UIColor.redColor(), forState: .Normal)
+                Slevel.setTitle("poor", forState: .Normal)
+            }
+            if(currentString.length > 8){
+                Slevel.setTitleColor(UIColor.greenColor(), forState: .Normal)
+                Slevel.setTitle("good", forState: .Normal)
+            }
+        }
+    }
+    
+    /*func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        if(textField == password){
+            let currentString: NSString = textField.text!
+            print(currentString.length)
+            if(currentString.length <= 8 ){
+                Slevel.setTitleColor(UIColor.redColor(), forState: .Normal)
+                Slevel.setTitle("poor", forState: .Normal)
+                return true
+            }
+            if(currentString.length > 8){
+                Slevel.setTitleColor(UIColor.greenColor(), forState: .Normal)
+                Slevel.setTitle("good", forState: .Normal)
+                return true
+            }
+        }
+        return true
+    }*/
         
     
     

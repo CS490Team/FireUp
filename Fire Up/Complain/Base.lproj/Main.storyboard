@@ -124,16 +124,21 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="FPG-WG-vtB">
-                                <rect key="frame" x="67" y="161" width="192" height="30"/>
+                                <rect key="frame" x="66" y="162" width="192" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aXZ-Qb-iCM">
+                                <rect key="frame" x="249" y="245" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="BaM-hR-4qi"/>
                     <connections>
+                        <outlet property="Slevel" destination="aXZ-Qb-iCM" id="hoC-zU-wDy"/>
                         <outlet property="confirm_password" destination="wWA-ng-HEd" id="b5g-QG-oEh"/>
                         <outlet property="email" destination="FPG-WG-vtB" id="9K4-JJ-omX"/>
                         <outlet property="password" destination="wWA-ng-HEd" id="K6D-Pj-agQ"/>
@@ -548,7 +553,7 @@
         <image name="SignUpNew-1" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OVf-71-Yhk"/>
+        <segue reference="NcJ-pV-VjR"/>
         <segue reference="MSZ-3c-Rl3"/>
         <segue reference="EKS-go-H9C"/>
     </inferredMetricsTieBreakers>
