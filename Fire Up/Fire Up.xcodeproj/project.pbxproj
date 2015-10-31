@@ -41,6 +41,7 @@
 		B1DDB02F1A68BB9700BE60E7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DDB02E1A68BB9700BE60E7 /* Accounts.framework */; };
 		B1F09A321A684808003DA14A /* ExImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F09A311A684808003DA14A /* ExImageView.m */; };
 		E910DD1C1BC407E6006CA590 /* EditProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */; settings = {ASSET_TAGS = (); }; };
+		E987CAC81BE51597008CC6E2 /* PasswordRecover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E987CAC71BE51597008CC6E2 /* PasswordRecover.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		B1F09A301A684808003DA14A /* ExImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExImageView.h; sourceTree = "<group>"; };
 		B1F09A311A684808003DA14A /* ExImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExImageView.m; sourceTree = "<group>"; };
 		E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfilePage.swift; sourceTree = "<group>"; };
+		E987CAC71BE51597008CC6E2 /* PasswordRecover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				B169EFF71A62FAF600920072 /* Complain.xcdatamodeld */,
 				B169EFF31A62FAF600920072 /* Supporting Files */,
 				B169F0391A62FC3200920072 /* Complain-Bridging-Header.h */,
+				E987CAC71BE51597008CC6E2 /* PasswordRecover.swift */,
 			);
 			path = Complain;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */,
 				B1B09D471A65F6DC0092F109 /* PostViewController.swift in Sources */,
 				B169F03F1A62FF0900920072 /* MainPageTableViewCell.swift in Sources */,
+				E987CAC81BE51597008CC6E2 /* PasswordRecover.swift in Sources */,
 				B1B09D451A65F6C50092F109 /* DetailViewController.swift in Sources */,
 				B169EFF61A62FAF600920072 /* AppDelegate.swift in Sources */,
 				E910DD1C1BC407E6006CA590 /* EditProfilePage.swift in Sources */,
