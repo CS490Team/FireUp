@@ -57,17 +57,43 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
         self.navigationItem.rightBarButtonItem = rightBarItem
     }
     
-    func resizePic(){
+    func shouldUpload(var theImage: UIImage) -> UIImage{
+        let width:CGFloat = 500
+        let height:CGFloat = 500
         
+        let size = CGSizeMake(width, height)
+        
+        UIGraphicsBeginImageContextWithOptions(size, false, 0)
+        
+        theImage.drawInRect(CGRectMake(0, 0, size.width, size.height))
+        
+        theImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return theImage
+    }
+    
+    func sizeCheck(imageSize: Int) -> Bool{
+        if(imageSize > 10485760){
+            return false
+        }else{
+            return true
+        }
     }
 
     func rightBarButtonAction(){
         let post = PFObject(className: "feed")
         post["text"] = addText.text
-        let imageData = UIImagePNGRepresentation(addPhoto.currentImage!)
+        
+        let orginImage = addPhoto.currentImage!
+        let resizedImage = shouldUpload(orginImage)
+        
+        
+        let imageData = UIImagePNGRepresentation(resizedImage)
         let imageFile = PFFile(name:"image.png", data:imageData!)
+        
         post["image"] = imageFile
         post.saveInBackgroundWithBlock(nil)
+        
         self.performSegueWithIdentifier("MainPageTableViewController", sender: self.navigationItem.rightBarButtonItem)
     }
     

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pAB-v6-pag">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pAB-v6-pag">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -198,24 +198,24 @@
         <scene sceneID="uMZ-7H-Ihu">
             <objects>
                 <tableViewController id="Ef3-th-74L" customClass="MainPageTableViewController" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="315" sectionHeaderHeight="22" sectionFooterHeight="22" id="P12-n5-AN1">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="373" sectionHeaderHeight="22" sectionFooterHeight="22" id="P12-n5-AN1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainPageCell" rowHeight="315" id="7wu-xq-El2" customClass="MainPageTableViewCell" customModule="Complain" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="320" height="315"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainPageCell" rowHeight="373" id="7wu-xq-El2" customClass="MainPageTableViewCell" customModule="Complain" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="320" height="373"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7wu-xq-El2" id="Qtj-5O-JrR">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="314.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
-                                            <rect key="frame" x="0.0" y="0.0" width="2240" height="2119"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="2240" height="2177"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LZa-OV-kRL">
-                                            <rect key="frame" x="244" y="284" width="68" height="30"/>
+                                            <rect key="frame" x="244" y="334" width="68" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Comment">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -224,10 +224,19 @@
                                                 <segue destination="z5r-4a-6qi" kind="push" identifier="toComment" id="rhL-Gw-Zh9"/>
                                             </connections>
                                         </button>
-                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="Wug-xF-8i8">
-                                            <rect key="frame" x="8" y="241" width="240" height="65"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5cG-yX-hwD">
+                                            <rect key="frame" x="8" y="8" width="58" height="58"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="azG-TF-gyE">
+                                            <rect key="frame" x="82" y="22" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="1"/>
+                                        </button>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="Wug-xF-8i8">
+                                            <rect key="frame" x="8" y="316" width="240" height="65"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
@@ -236,6 +245,8 @@
                                 <connections>
                                     <outlet property="TheImage" destination="VYJ-1r-zJO" id="z6b-W7-mMU"/>
                                     <outlet property="TheText" destination="Wug-xF-8i8" id="57J-QO-TX0"/>
+                                    <outlet property="UserImage" destination="5cG-yX-hwD" id="fGw-Z8-WA2"/>
+                                    <outlet property="UserName" destination="azG-TF-gyE" id="dcJ-Nz-KvD"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -598,8 +609,8 @@
         <image name="SignUpNew-1" width="375" height="667"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NcJ-pV-VjR"/>
-        <segue reference="MSZ-3c-Rl3"/>
         <segue reference="EKS-go-H9C"/>
+        <segue reference="OVf-71-Yhk"/>
+        <segue reference="MSZ-3c-Rl3"/>
     </inferredMetricsTieBreakers>
 </document>

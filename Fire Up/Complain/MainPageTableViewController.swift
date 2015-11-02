@@ -49,12 +49,16 @@ class MainPageTableViewController: PFQueryTableViewController{
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("MainPageCell", forIndexPath: indexPath) as! MainPageTableViewCell
-        cell.TheImage.frame = CGRectMake(0, 0, 320, 250)
+        cell.TheImage.frame = CGRectMake(0, 70, 320, 250)
         cell.TheImage.image = UIImage(named: "1421031790_Picture")
         let photo: PFObject = self.objects[indexPath.row] as! PFObject
         
         cell.TheText.text = self.objects[indexPath.row].valueForKey("text")! as! String
         cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
+        
+        
+        //let TheUSer:PFUser = PFUser.
+
         cell.TheImage.loadInBackground(nil)
         return cell
     }

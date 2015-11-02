@@ -47,42 +47,6 @@ class AddCommentsViewController: UIViewController, UITextFieldDelegate{
         return false
     }
     
-    /*override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        self.view.endEditing(true)
-        var touches = touches.anyObject() as! UITouch
-        location = touches.locationInView(self.view)
-        preLocation = location
-    }
-    
-    override func touchesMoved(touches: NSSet, withEvent event: UIEvent) {
-        let touches = touches.anyObject() as! UITouch
-        location = touches.locationInView(self.view)
-        if((theAvatar.frame.origin.x - preLocation!.x + location!.x <= theImage.frame.origin.x)&&(theAvatar.frame.origin.y - (preLocation!.y - location!.y) <= theImage.frame.origin.y)){     //left top
-            
-        }else if((location!.x - preLocation!.x + theTextLabel.frame.width + theTextLabel.frame.origin.x >= theImage.frame.origin.x + theImage.frame.width)&&(theAvatar.frame.origin.y - (preLocation!.y - location!.y) <= theImage.frame.origin.y)){       //right top
-            
-        }else if((theAvatar.frame.origin.x - preLocation!.x + location!.x <= theImage.frame.origin.x)&&(location!.y - preLocation!.y + theAvatar.frame.origin.y + theAvatar.frame.height >= theImage.frame.origin.y + theImage.frame.height)){       //left bottom
-            
-        }else if((location!.x - preLocation!.x + theTextLabel.frame.width + theTextLabel.frame.origin.x >= theImage.frame.origin.x + theImage.frame.width)&&(location!.y - preLocation!.y + theAvatar.frame.origin.y + theAvatar.frame.height >= theImage.frame.origin.y + theImage.frame.height)){   //right bottom
-            
-        }else if(location!.x - preLocation!.x + theTextLabel.frame.width + theTextLabel.frame.origin.x >= theImage.frame.origin.x + theImage.frame.width){ //right
-            theAvatar.frame = CGRectOffset(theAvatar.frame, 0, location!.y - preLocation!.y)
-            theTextLabel.frame = CGRectOffset(theTextLabel.frame, 0, location!.y - preLocation!.y)
-        }else if(theAvatar.frame.origin.x - preLocation!.x + location!.x <= theImage.frame.origin.x){   //left
-            theAvatar.frame = CGRectOffset(theAvatar.frame, 0, location!.y - preLocation!.y)
-            theTextLabel.frame = CGRectOffset(theTextLabel.frame, 0, location!.y - preLocation!.y)
-        }else if(location!.y - preLocation!.y + theAvatar.frame.origin.y + theAvatar.frame.height >= theImage.frame.origin.y + theImage.frame.height){ //bottom
-            theAvatar.frame = CGRectOffset(theAvatar.frame, location!.x - preLocation!.x, 0)
-            theTextLabel.frame = CGRectOffset(theTextLabel.frame, location!.x - preLocation!.x, 0)
-        }else if(theAvatar.frame.origin.y - (preLocation!.y - location!.y) <= theImage.frame.origin.y){//top
-            theAvatar.frame = CGRectOffset(theAvatar.frame, location!.x - preLocation!.x, 0)
-            theTextLabel.frame = CGRectOffset(theTextLabel.frame, location!.x - preLocation!.x, 0)
-        }else{
-            theAvatar.frame = CGRectOffset(theAvatar.frame, location!.x - preLocation!.x, location!.y - preLocation!.y)
-            theTextLabel.frame = CGRectOffset(theTextLabel.frame, location!.x - preLocation!.x, location!.y - preLocation!.y)
-        }
-        preLocation = location
-    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
