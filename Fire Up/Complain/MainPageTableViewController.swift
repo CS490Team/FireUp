@@ -21,6 +21,13 @@ class MainPageTableViewController: PFQueryTableViewController{
         self.objectsPerPage = 15
     }
     
+    override func queryForTable() -> PFQuery! {
+        //super.queryForTable()
+        let queryForUser: PFQuery = PFQuery(className: "feed")
+        queryForUser.includeKey("feeder")
+        return queryForUser
+    }
+    
     func loadData(){
         
     }
@@ -56,8 +63,14 @@ class MainPageTableViewController: PFQueryTableViewController{
         cell.TheText.text = self.objects[indexPath.row].valueForKey("text")! as! String
         cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         
-        
-        //let TheUSer:PFUser = PFUser.
+       // let UserID = self.objects[indexPath.row].valueForKey("feeder")
+        let CUser = self.objects[indexPath.row].valueForKey("feeder") as! PFUser
+        //let TQuery = PFUser.query()
+        //TQuery.whereKey("objectId", equalTo: self.objects[indexPath.row].valueForKey("feeder"))
+        //let TUser:PFUser = TQuery.whereKey(<#T##key: String!##String!#>, equalTo: <#T##AnyObject!#>)
+        print(CUser)
+        let username:String = CUser.username as! String
+        cell.UserName.setTitle(username, forState: .Normal)
 
         cell.TheImage.loadInBackground(nil)
         return cell

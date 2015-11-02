@@ -92,6 +92,7 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
         let imageFile = PFFile(name:"image.png", data:imageData!)
         
         post["image"] = imageFile
+        post["feeder"] = PFUser.currentUser()
         post.saveInBackgroundWithBlock(nil)
         
         self.performSegueWithIdentifier("MainPageTableViewController", sender: self.navigationItem.rightBarButtonItem)
