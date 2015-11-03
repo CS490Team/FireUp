@@ -1,6 +1,5 @@
 //
 //  MainPageTableViewCell.swift
-//  Complain
 //
 //  Copyright (c) 2015 sunkai. All rights reserved.
 //
@@ -17,5 +16,5 @@ class MainPageTableViewCell: UITableViewCell {
     
     @IBOutlet weak var UserName: UIButton!
     
-    
+    @IBOutlet var thumbnailImage: PFImageView! = PFImageView()
 }

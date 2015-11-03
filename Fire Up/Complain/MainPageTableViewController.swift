@@ -1,6 +1,5 @@
 //
 //  MainPageTableViewController.swift
-//  Complain
 //
 //  Copyright (c) 2015 sunkai. All rights reserved.
 //
@@ -25,6 +24,7 @@ class MainPageTableViewController: PFQueryTableViewController{
         //super.queryForTable()
         let queryForUser: PFQuery = PFQuery(className: "feed")
         queryForUser.includeKey("feeder")
+        //queryForUser.includeKey("feeder.User_Profile_Picture")
         return queryForUser
     }
     
@@ -58,10 +58,11 @@ class MainPageTableViewController: PFQueryTableViewController{
         let cell = tableView.dequeueReusableCellWithIdentifier("MainPageCell", forIndexPath: indexPath) as! MainPageTableViewCell
         cell.TheImage.frame = CGRectMake(0, 70, 320, 250)
         cell.TheImage.image = UIImage(named: "1421031790_Picture")
-        let photo: PFObject = self.objects[indexPath.row] as! PFObject
+        //let photo: PFObject = self.objects[indexPath.row] as! PFObject
         
         cell.TheText.text = self.objects[indexPath.row].valueForKey("text")! as! String
         cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
+        print(cell.TheImage.file)
         
        // let UserID = self.objects[indexPath.row].valueForKey("feeder")
         let CUser = self.objects[indexPath.row].valueForKey("feeder") as! PFUser
@@ -71,6 +72,21 @@ class MainPageTableViewController: PFQueryTableViewController{
         print(CUser)
         let username:String = CUser.username as! String
         cell.UserName.setTitle(username, forState: .Normal)
+        cell.UserName.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        //cell.thumbnailImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
+        //cell.thumbnailImage.file = CUser.valueForKey("User_Profile_Picture")! as! PFFile
+        
+        let ImageFile:PFFile = CUser.valueForKey("User_Profile_Picture") as! PFFile
+        ImageFile.getDataInBackgroundWithBlock({
+            (data:NSData!, error:NSError!) -> Void in
+            if (error == nil){
+                let TRImage = UIImage(data: data)
+                cell.thumbnailImage.image = TRImage
+            }
+        })
+        
+        
+        //print(cell.thumbnailImage.file)
 
         cell.TheImage.loadInBackground(nil)
         return cell

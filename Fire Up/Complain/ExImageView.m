@@ -1,6 +1,5 @@
 //
 //  ExImageView.m
-//  Complain
 //
 //  Copyright (c) 2015 sunkai. All rights reserved.
 //

@@ -221,7 +221,7 @@
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5cG-yX-hwD">
-                                            <rect key="frame" x="8" y="8" width="58" height="58"/>
+                                            <rect key="frame" x="116" y="8" width="58" height="58"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="azG-TF-gyE">
@@ -237,8 +237,12 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
-                                            <rect key="frame" x="0.0" y="0.0" width="2240" height="2177"/>
+                                            <rect key="frame" x="8" y="74" width="2232" height="2103"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1421031790_Picture" id="7IK-0n-0XO" customClass="PFImageView">
+                                            <rect key="frame" x="8" y="8" width="58" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
@@ -247,6 +251,7 @@
                                     <outlet property="TheText" destination="Wug-xF-8i8" id="57J-QO-TX0"/>
                                     <outlet property="UserImage" destination="5cG-yX-hwD" id="fGw-Z8-WA2"/>
                                     <outlet property="UserName" destination="azG-TF-gyE" id="dcJ-Nz-KvD"/>
+                                    <outlet property="thumbnailImage" destination="7IK-0n-0XO" id="uWg-md-h97"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
