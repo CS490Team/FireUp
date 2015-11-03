@@ -82,6 +82,11 @@ class MainPageTableViewController: PFQueryTableViewController{
             if (error == nil){
                 let TRImage = UIImage(data: data)
                 cell.thumbnailImage.image = TRImage
+                cell.thumbnailImage.layer.borderWidth = 1.0
+                cell.thumbnailImage.layer.masksToBounds = false
+                cell.thumbnailImage.layer.borderColor = UIColor.whiteColor().CGColor
+                cell.thumbnailImage.layer.cornerRadius = cell.thumbnailImage.frame.size.width/2
+                cell.thumbnailImage.clipsToBounds = true
             }
         })
         
