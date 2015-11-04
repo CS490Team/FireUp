@@ -5,3 +5,5 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import "ExImageView.h"
+#import "JSQMessages.h"
+#import "JSQSystemSoundPlayer.h"
