@@ -60,6 +60,8 @@
 		7EC7474D1BEAB436002DAA0B /* JSQMessagesTypingIndicatorFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC747211BEAB436002DAA0B /* JSQMessagesTypingIndicatorFooterView.m */; };
 		7EC7474E1BEAB436002DAA0B /* JSQMessagesTypingIndicatorFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EC747221BEAB436002DAA0B /* JSQMessagesTypingIndicatorFooterView.xib */; };
 		7EC747511BEAB4DB002DAA0B /* JSQSystemSoundPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC747501BEAB4DB002DAA0B /* JSQSystemSoundPlayer.m */; };
+		7EC747531BEABC63002DAA0B /* ChatOverViewConttroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC747521BEABC63002DAA0B /* ChatOverViewConttroller.swift */; };
+		7EC747551BEAC11B002DAA0B /* ChooseContactTableViewConttroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC747541BEAC11B002DAA0B /* ChooseContactTableViewConttroller.swift */; };
 		B169EFF61A62FAF600920072 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B169EFF51A62FAF600920072 /* AppDelegate.swift */; };
 		B169EFF91A62FAF600920072 /* Complain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B169EFF71A62FAF600920072 /* Complain.xcdatamodeld */; };
 		B169EFFE1A62FAF600920072 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B169EFFC1A62FAF600920072 /* Main.storyboard */; };
@@ -206,6 +208,8 @@
 		7EC747221BEAB436002DAA0B /* JSQMessagesTypingIndicatorFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JSQMessagesTypingIndicatorFooterView.xib; sourceTree = "<group>"; };
 		7EC7474F1BEAB4DB002DAA0B /* JSQSystemSoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSQSystemSoundPlayer.h; sourceTree = "<group>"; };
 		7EC747501BEAB4DB002DAA0B /* JSQSystemSoundPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSQSystemSoundPlayer.m; sourceTree = "<group>"; };
+		7EC747521BEABC63002DAA0B /* ChatOverViewConttroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatOverViewConttroller.swift; sourceTree = "<group>"; };
+		7EC747541BEAC11B002DAA0B /* ChooseContactTableViewConttroller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseContactTableViewConttroller.swift; sourceTree = "<group>"; };
 		B169EFF01A62FAF600920072 /* Complain.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Complain.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B169EFF41A62FAF600920072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B169EFF51A62FAF600920072 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -495,6 +499,8 @@
 				B169EFF31A62FAF600920072 /* Supporting Files */,
 				B169F0391A62FC3200920072 /* Complain-Bridging-Header.h */,
 				E987CAC71BE51597008CC6E2 /* PasswordRecover.swift */,
+				7EC747521BEABC63002DAA0B /* ChatOverViewConttroller.swift */,
+				7EC747541BEAC11B002DAA0B /* ChooseContactTableViewConttroller.swift */,
 			);
 			path = Complain;
 			sourceTree = "<group>";
@@ -715,7 +721,9 @@
 				7EC7473E1BEAB436002DAA0B /* JSQMessagesCellTextView.m in Sources */,
 				7EC747241BEAB436002DAA0B /* JSQSystemSoundPlayer+JSQMessages.m in Sources */,
 				7EC747251BEAB436002DAA0B /* NSBundle+JSQMessages.m in Sources */,
+				7EC747551BEAC11B002DAA0B /* ChooseContactTableViewConttroller.swift in Sources */,
 				7EC747431BEAB436002DAA0B /* JSQMessagesCollectionViewCellOutgoing.m in Sources */,
+				7EC747531BEABC63002DAA0B /* ChatOverViewConttroller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
