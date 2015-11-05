@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E012D641BC1CC520011B4D1 /* SignUp.swift */; };
+		7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */; };
 		7EC746BA1BEAB292002DAA0B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B31BEAB292002DAA0B /* Bolts.framework */; };
 		7EC746BB1BEAB292002DAA0B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B41BEAB292002DAA0B /* Parse.framework */; };
 		7EC746BC1BEAB292002DAA0B /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B51BEAB292002DAA0B /* ParseCrashReporting.framework */; };
@@ -110,6 +111,7 @@
 
 /* Begin PBXFileReference section */
 		7E012D641BC1CC520011B4D1 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 		7EC746B31BEAB292002DAA0B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7EC746B41BEAB292002DAA0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7EC746B51BEAB292002DAA0B /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -483,6 +485,7 @@
 				B169EFF51A62FAF600920072 /* AppDelegate.swift */,
 				E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */,
 				B169EFFC1A62FAF600920072 /* Main.storyboard */,
+				7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */,
 				7E012D641BC1CC520011B4D1 /* SignUp.swift */,
 				B169F03C1A62FEF500920072 /* MainPageTableViewController.swift */,
 				B169F03E1A62FF0900920072 /* MainPageTableViewCell.swift */,
@@ -699,6 +702,7 @@
 				7EC747291BEAB436002DAA0B /* UIImage+JSQMessages.m in Sources */,
 				7EC747301BEAB436002DAA0B /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
 				E910DD1C1BC407E6006CA590 /* EditProfilePage.swift in Sources */,
+				7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */,
 				7EC7473B1BEAB436002DAA0B /* JSQMessagesBubbleImage.m in Sources */,
 				7EC747261BEAB436002DAA0B /* NSString+JSQMessages.m in Sources */,
 				7EC7472A1BEAB436002DAA0B /* UIView+JSQMessages.m in Sources */,

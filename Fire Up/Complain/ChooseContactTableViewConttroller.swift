@@ -36,6 +36,7 @@ class ChooseContactTableViewConttroller: PFQueryTableViewController, UISearchBar
 
     override func queryForTable() -> PFQuery! {
         let query = PFUser.query()
+        query.whereKey("objectId", notEqualTo: PFUser.currentUser().objectId)
         if searchInProgress{
             query.whereKey("username", containsString: searchString)
         }
@@ -52,6 +53,39 @@ class ChooseContactTableViewConttroller: PFQueryTableViewController, UISearchBar
         searchInProgress = true
         self.loadObjects()
         searchInProgress = false
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if(PFUser.currentUser() != nil){
+            var user1 = PFUser.currentUser()
+            var user2 = self.objects[indexPath.row] as! PFUser
+            var room = PFObject(className: "ChatRoom")
+            //
+            let pred = NSPredicate (format: "user1 = %@ AND user2 = %@ OR user1 = %@ AND user2 = %@", user1,user2,user2,user1)
+            let roomQuery = PFQuery(className: "ChatRoom", predicate:  pred)
+            roomQuery.findObjectsInBackgroundWithBlock({ (results:[AnyObject]!, error: NSError!) -> Void in
+                if(error == nil){
+                    if(results.count>0){
+                        //room already exist
+                        room = results.last as! PFObject
+                    }else{
+                        //new room
+                        room["user1"] = user1
+                        room["user2"] = user2
+                        room.saveInBackgroundWithBlock({ (success:Bool!, error:NSError!) -> Void in
+                            if(error != nil){
+                                print("ChooseContactTableViewConttroller: save room error")
+                            }
+                        })
+                    }
+                }
+            })
+            
+            
+            
+        }else{
+            print("ChooseContactTableViewConttroller: NotLogin")
+        }
     }
     
     
