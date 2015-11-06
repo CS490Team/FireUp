@@ -14,16 +14,10 @@ class AddCommentsViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet weak var theTextField: UITextField!
     
     
-    
-    
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         theImage.image = TRImage
         addLeftBarItem()
-        self.navigationItem.rightBarButtonItem?.enabled = false
     }
     
     

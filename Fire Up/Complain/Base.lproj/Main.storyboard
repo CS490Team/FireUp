@@ -322,7 +322,7 @@
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
-                                                <segue destination="z5r-4a-6qi" kind="push" id="7em-a4-QGT"/>
+                                                <segue destination="z5r-4a-6qi" kind="push" identifier="toComment" id="7em-a4-QGT"/>
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5cG-yX-hwD">
@@ -418,7 +418,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlT-rS-xz4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1251"/>
+            <point key="canvasLocation" x="762" y="1336"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="rdq-ZU-5DG">
