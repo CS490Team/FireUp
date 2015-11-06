@@ -55,33 +55,37 @@ class MessageViewController: JSQMessagesViewController {
     }
     
     func loadMessages(){
+
         var lastMessage: JSQMessage? = nil
         if messages.last != nil{
             lastMessage = messages.last!
         }
         
         let messageQuery = PFQuery(className: "Message")
-        messageQuery.whereKey("room", equalTo: room)
+        messageQuery.whereKey("room", equalTo: self.room)
         messageQuery.limit = 500
-        messageQuery.includeKey("User")
+        messageQuery.includeKey("user")
         messageQuery.orderByAscending("createdAt")
         
         if lastMessage != nil{
             messageQuery.whereKey("createdAt", greaterThan: lastMessage!.date)
         }
-        
+        print("here");
+        print(self.room)
+
         messageQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
             if error == nil{
                 let messages = results as! [PFObject]
                 for message in messages {
                     self.messageObject.append(message)
+                    
                     let user = message["user"] as! PFUser
                     self.users.append(user)
                     
                     let chatMessage = JSQMessage(senderId: user.objectId, senderDisplayName: user.username, date: message.createdAt, text: message["content"] as! String)
                     self.messages.append(chatMessage)
+                    print("here inside")
                     print(message["content"])
-                    
                 }
             }
             if results.count != 0{

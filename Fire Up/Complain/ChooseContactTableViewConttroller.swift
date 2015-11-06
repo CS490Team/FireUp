@@ -79,8 +79,7 @@ class ChooseContactTableViewConttroller: PFQueryTableViewController, UISearchBar
                         })
                     }
                 }
-            })
-            
+            })            
             
             
         }else{
