@@ -170,6 +170,12 @@ class MessageViewController: JSQMessagesViewController {
         return 0
     }
     
+    override func collectionView(collectionView: JSQMessagesCollectionView!, layout collectionViewLayout: JSQMessagesCollectionViewFlowLayout!, heightForCellTopLabelAtIndexPath indexPath: NSIndexPath!) -> CGFloat {
+        if (indexPath.item%3 == 0){
+            return kJSQMessagesCollectionViewCellLabelHeightDefault
+        }
+        return 0
+    }
     /*
     // MARK: - Navigation
 
