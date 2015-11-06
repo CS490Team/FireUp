@@ -84,4 +84,27 @@ class ChatOverViewConttroller: UITableViewController {
         return cell;
     }
     
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let messagesVC = storyboard.instantiateViewControllerWithIdentifier("MessageViewController") as! MessageViewController
+        let user1 = PFUser.currentUser()
+        let user2 = users[indexPath.row]
+        let pred = NSPredicate(format: "user1 = %@ AND user2= %@ OR user1 = %@ AND user2 = %@", user1,user2,user2,user1)
+        
+        let roomQuery = PFQuery(className: "ChatRoom", predicate: pred)
+        roomQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
+            if error == nil{
+                let room = results.last as! PFObject
+                messagesVC.room = room
+                messagesVC.incomingUser = user2
+                self.navigationController?.pushViewController(messagesVC, animated: true)
+            }
+        }
+    }
+    
+    
+    
+    
+    
+    
 }

@@ -15,6 +15,8 @@ class Login: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         passwordTextField.delegate = self
         usernameTextField.delegate = self
+        //self.tabBarController?.tabBar.hidden = true;
+        //self.navigationController?.toolbar.hidden = true;
     }
     
     override func didReceiveMemoryWarning() {
