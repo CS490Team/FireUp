@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E012D641BC1CC520011B4D1 /* SignUp.swift */; };
 		7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE351BEC0FE500494B44 /* MessageViewController.swift */; };
+		7E31EE391BEC47BB00494B44 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */; };
 		7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */; };
 		7EC746BA1BEAB292002DAA0B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B31BEAB292002DAA0B /* Bolts.framework */; };
 		7EC746BB1BEAB292002DAA0B /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B41BEAB292002DAA0B /* Parse.framework */; };
@@ -113,6 +114,8 @@
 /* Begin PBXFileReference section */
 		7E012D641BC1CC520011B4D1 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		7E31EE351BEC0FE500494B44 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
+		7E31EE371BEC47BB00494B44 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
+		7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 		7EC746B31BEAB292002DAA0B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7EC746B41BEAB292002DAA0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -302,6 +305,8 @@
 		7EC746C11BEAB3F3002DAA0B /* JSQ */ = {
 			isa = PBXGroup;
 			children = (
+				7E31EE371BEC47BB00494B44 /* NSDate+Utilities.h */,
+				7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */,
 				7EC7474F1BEAB4DB002DAA0B /* JSQSystemSoundPlayer.h */,
 				7EC747501BEAB4DB002DAA0B /* JSQSystemSoundPlayer.m */,
 				7EC746C21BEAB436002DAA0B /* JSQMessagesViewController */,
@@ -704,6 +709,7 @@
 				7EC747511BEAB4DB002DAA0B /* JSQSystemSoundPlayer.m in Sources */,
 				7EC747291BEAB436002DAA0B /* UIImage+JSQMessages.m in Sources */,
 				7EC747301BEAB436002DAA0B /* JSQMessagesMediaViewBubbleImageMasker.m in Sources */,
+				7E31EE391BEC47BB00494B44 /* NSDate+Utilities.m in Sources */,
 				E910DD1C1BC407E6006CA590 /* EditProfilePage.swift in Sources */,
 				7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */,
 				7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */,
