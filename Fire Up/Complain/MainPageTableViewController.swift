@@ -70,7 +70,7 @@ class MainPageTableViewController: PFQueryTableViewController{
         //TQuery.whereKey("objectId", equalTo: self.objects[indexPath.row].valueForKey("feeder"))
         //let TUser:PFUser = TQuery.whereKey(<#T##key: String!##String!#>, equalTo: <#T##AnyObject!#>)
         print(CUser)
-        let username:String = CUser.username as! String
+        let username:String = CUser.username as String
         cell.UserName.setTitle(username, forState: .Normal)
         cell.UserName.setTitleColor(UIColor.blackColor(), forState: .Normal)
         //cell.thumbnailImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
@@ -96,6 +96,13 @@ class MainPageTableViewController: PFQueryTableViewController{
         cell.TheImage.loadInBackground(nil)
         return cell
     }
+    
+    
+    /*
+    var DestViewController : ViewProfile = segue.destinationViewController as! ViewProfile
+    var DestViewController : ViewProfile = segue.destinationViewController as! ViewProfile
+    DestViewController.usName = cell.UserName
+    */
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if(segue.identifier == "toComment"){

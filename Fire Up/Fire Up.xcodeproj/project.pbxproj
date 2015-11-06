@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00858BD01BEC6D9E00205E6D /* ViewProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */; };
 		7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E012D641BC1CC520011B4D1 /* SignUp.swift */; };
 		7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE351BEC0FE500494B44 /* MessageViewController.swift */; };
 		7E31EE391BEC47BB00494B44 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */; };
@@ -112,6 +113,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProfile.swift; sourceTree = "<group>"; };
 		7E012D641BC1CC520011B4D1 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		7E31EE351BEC0FE500494B44 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		7E31EE371BEC47BB00494B44 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
@@ -492,6 +494,7 @@
 				B169EFF51A62FAF600920072 /* AppDelegate.swift */,
 				E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */,
 				B169EFFC1A62FAF600920072 /* Main.storyboard */,
+				00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */,
 				7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */,
 				7E012D641BC1CC520011B4D1 /* SignUp.swift */,
 				B169F03C1A62FEF500920072 /* MainPageTableViewController.swift */,
@@ -726,6 +729,7 @@
 				7EC747341BEAB436002DAA0B /* JSQMessagesCollectionViewFlowLayout.m in Sources */,
 				B169F03D1A62FEF500920072 /* MainPageTableViewController.swift in Sources */,
 				7EC7472B1BEAB436002DAA0B /* JSQMessagesKeyboardController.m in Sources */,
+				00858BD01BEC6D9E00205E6D /* ViewProfile.swift in Sources */,
 				7EC747321BEAB436002DAA0B /* JSQMessagesToolbarButtonFactory.m in Sources */,
 				7EC747391BEAB436002DAA0B /* JSQMessage.m in Sources */,
 				7EC747461BEAB436002DAA0B /* JSQMessagesInputToolbar.m in Sources */,
