@@ -17,4 +17,6 @@ class MainPageTableViewCell: UITableViewCell {
     @IBOutlet weak var UserName: UIButton!
     
     @IBOutlet var thumbnailImage: PFImageView! = PFImageView()
+    
+    var Username:String!
 }

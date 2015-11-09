@@ -75,6 +75,7 @@ class MainPageTableViewController: PFQueryTableViewController{
         cell.UserName.setTitleColor(UIColor.blackColor(), forState: .Normal)
         //cell.thumbnailImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         //cell.thumbnailImage.file = CUser.valueForKey("User_Profile_Picture")! as! PFFile
+        cell.Username = username
         
         let ImageFile:PFFile = CUser.valueForKey("User_Profile_Picture") as! PFFile
         ImageFile.getDataInBackgroundWithBlock({
@@ -111,6 +112,14 @@ class MainPageTableViewController: PFQueryTableViewController{
             let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
             let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
             VC.TRImage = cell.TheImage.image
+        }
+        if(segue.identifier == "toProfile"){
+            let VC = segue.destinationViewController as! ViewProfile
+            let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
+            let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
+            VC.TRImage = cell.TheImage.image
+            VC.TRUsername = cell.Username
         }
     }
     

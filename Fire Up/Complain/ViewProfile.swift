@@ -20,11 +20,22 @@ class ViewProfile : UIViewController {
     //var usName = String()
     //var profileArray = [String]()
     
+    var TRImage:UIImage!
+    var TRUsername:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         //do any additional setup after loading the view.
         
-        //username.text = usName
+        username.text = TRUsername
+        userimage.image = TRImage
+        
+         userimage.image = TRImage
+         userimage.layer.borderWidth = 1.0
+         userimage.layer.masksToBounds = false
+         userimage.layer.borderColor = UIColor.whiteColor().CGColor
+         userimage.layer.cornerRadius =  userimage.frame.size.width/2
+         userimage.clipsToBounds = true
     }
     
     /*
