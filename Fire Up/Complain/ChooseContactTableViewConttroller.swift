@@ -82,7 +82,7 @@ class ChooseContactTableViewConttroller: PFQueryTableViewController, UISearchBar
                         //new room
                         room["user1"] = user1
                         room["user2"] = user2
-                        room.saveInBackgroundWithBlock({ (success:Bool!, error:NSError!) -> Void in
+                        room.saveInBackgroundWithBlock({ (success:Bool, error:NSError!) -> Void in
                             if(error != nil){
                                 print("ChooseContactTableViewConttroller: save room error")
                             }else{

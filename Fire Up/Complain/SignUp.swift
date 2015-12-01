@@ -23,7 +23,7 @@ class SignUp: UIViewController, UITextFieldDelegate{
         self.confirm_password.delegate = self
         self.email.delegate = self
         Slevel.bringSubviewToFront(self.view)
-        self.tabBarController?.tabBar.hidden = true;
+        //self.tabBarController?.tabBar.hidden = true;
 
     }
     

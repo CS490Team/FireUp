@@ -101,7 +101,7 @@ class MessageViewController: JSQMessagesViewController {
         message["content"] = text
         message["room"] = room
         message["user"] = PFUser.currentUser()
-        message.saveInBackgroundWithBlock { (success:Bool!, error: NSError!) -> Void in
+        message.saveInBackgroundWithBlock { (success:Bool, error: NSError!) -> Void in
             if error == nil{
                 self.loadMessages()
                 self.room["LastUpdate"] = NSDate()
