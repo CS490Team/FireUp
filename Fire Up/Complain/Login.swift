@@ -56,6 +56,9 @@ class Login: UIViewController, UITextFieldDelegate{
             (user:PFUser!, error:NSError!)->Void in
             if(error == nil){
                 self.performSegueWithIdentifier("LoginToMain", sender: self)
+                let installation = PFInstallation.currentInstallation()
+                installation["User"] = PFUser.currentUser()
+                installation.saveInBackgroundWithBlock(nil)
             }else{
                 let userMessage = "Login Error"
                 let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
@@ -66,6 +69,9 @@ class Login: UIViewController, UITextFieldDelegate{
             }
         })
         }
+        
+        
+        
     }
     
     @IBAction func signup(sender: AnyObject){

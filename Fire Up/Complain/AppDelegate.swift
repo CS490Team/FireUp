@@ -19,6 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let notificationSetting = UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil)
         UIApplication.sharedApplication().registerUserNotificationSettings(notificationSetting)
+    
+        application.registerUserNotificationSettings(notificationSetting)
+        application.registerForRemoteNotifications()
         return true
     }
     
