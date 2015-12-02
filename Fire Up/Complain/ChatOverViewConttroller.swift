@@ -15,6 +15,27 @@ class ChatOverViewConttroller: UITableViewController {
     var rooms = [PFObject]()
     var users = [PFUser]()
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "displayPushMessages", name: "displayMessages", object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "displayMessages", object: nil)
+
+    }
+    
+    func displayPushMessage (notification: NSNotification){
+        let notificationDict = notification.object as! NSDictionary
+        if let aps = notificationDict.objectForKey("aps") as? NSDictionary{
+            let messagesText = aps.objectForKey("Alert") as! String
+            let alert = UIAlertController(title: "New message", message: messagesText, preferredStyle: UIAlertControllerStyle.Alert);
+            alert.addAction(UIAlertAction(title: "Thanks...", style: UIAlertActionStyle.Default, handler:nil ))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         self.navigationItem.setRightBarButtonItem(AddContactButton, animated: false)
     }

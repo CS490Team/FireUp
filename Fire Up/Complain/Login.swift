@@ -55,10 +55,10 @@ class Login: UIViewController, UITextFieldDelegate{
             PFUser.logInWithUsernameInBackground(username as String!, password: password as String!, block: {
             (user:PFUser!, error:NSError!)->Void in
             if(error == nil){
-                self.performSegueWithIdentifier("LoginToMain", sender: self)
                 let installation = PFInstallation.currentInstallation()
                 installation["User"] = PFUser.currentUser()
                 installation.saveInBackgroundWithBlock(nil)
+                self.performSegueWithIdentifier("LoginToMain", sender: self)
             }else{
                 let userMessage = "Login Error"
                 let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)

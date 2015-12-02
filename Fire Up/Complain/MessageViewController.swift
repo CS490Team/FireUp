@@ -54,6 +54,16 @@ class MessageViewController: JSQMessagesViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "loadMessages", name: "reloadMessages", object: nil)
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: "reloadMessages", object: nil)
+    }
+    
     func loadMessages(){
 
         var lastMessage: JSQMessage? = nil
@@ -104,6 +114,15 @@ class MessageViewController: JSQMessagesViewController {
         message.saveInBackgroundWithBlock { (success:Bool, error: NSError!) -> Void in
             if error == nil{
                 self.loadMessages()
+                
+                let pushQuery = PFInstallation.query()
+                pushQuery.whereKey("User", equalTo: self.incomingUser)
+                let push = PFPush()
+                push.setQuery(pushQuery)
+                let pushDictionary = ["alert":text, "badge":"increment", "sound":""]
+                push.setData(pushDictionary)
+                push.sendPushInBackgroundWithBlock(nil)
+                
                 self.room["LastUpdate"] = NSDate()
                 self.room.saveInBackgroundWithBlock(nil)
             }else {

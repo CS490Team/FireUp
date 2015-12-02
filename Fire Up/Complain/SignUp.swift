@@ -118,6 +118,6 @@ class SignUp: UIViewController, UITextFieldDelegate{
             alert.addAction(action)
             self.presentViewController(alert, animated: true, completion: nil)
         }
-    }
+        }
     }
 }
