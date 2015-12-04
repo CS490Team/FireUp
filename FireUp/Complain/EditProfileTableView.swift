@@ -127,7 +127,9 @@ class EditProfileTableView: UITableViewController,UITextFieldDelegate,UIImagePic
                     let profileVC = sb.instantiateViewControllerWithIdentifier("ProfilePage")
                     profileVC.navigationItem.setHidesBackButton(true, animated: false)
                     self.navigationController?.pushViewController(profileVC, animated: true)
+                    self.performSegueWithIdentifier("EditBackToProfile", sender: self)
                 }
+                self.performSegueWithIdentifier("EditBackToProfile", sender: self)
             }
         }
         

@@ -6,15 +6,16 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class ProfileViewController: UITableViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
-    @IBOutlet var LogoutButton: UIButton!
     @IBOutlet var user_profile_image: UIImageView!
     
-    @IBOutlet var username: UILabel!
-    @IBOutlet var email: UILabel!
-    @IBOutlet var FirstName: UILabel!
-    @IBOutlet var LastName: UILabel!
+    @IBOutlet var logOutButton: UIBarButtonItem!
+    @IBOutlet var LastName: UITextField!
+    @IBOutlet var FirstName: UITextField!
+    @IBOutlet var email: UITextField!
+    @IBOutlet var username: UITextField!
+
     var currentUser: String!
     
     override func viewWillAppear(test: Bool){
@@ -24,14 +25,20 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = logOutButton
         currentUser = PFUser.currentUser()!.username
-        print(currentUser)
-        username.text = "Username: " + currentUser
-        if(PFUser.currentUser()!.email != nil){
-            let temp = PFUser.currentUser()!.email
-            email.text = "Email: " + temp!
+        if(currentUser == nil){
+            print("nil")
+            self.performSegueWithIdentifier("ProfileToLogin", sender: self)
+
+        }else{
+            username.text = currentUser
+            if(PFUser.currentUser()!.email != nil){
+                let temp = PFUser.currentUser()!.email
+                email.text =  temp!
+            }
+            updateUserProfile()
         }
-        updateUserProfile()
     }
 
     override func didReceiveMemoryWarning() {
@@ -48,23 +55,21 @@ class ProfileViewController: UIViewController,UITextFieldDelegate,UIImagePickerC
     }
     func updateUserProfile(){
         currentUser = PFUser.currentUser()!.username
-        username.text = "Username: " + currentUser
+        username.text = currentUser
         if(PFUser.currentUser()?.email != nil){
-            email.text = "Email: "+PFUser.currentUser()!.email!
-        }else{
-            email.text = "Email: "
+            email.text = PFUser.currentUser()!.email!
         }
         if(PFUser.currentUser()?.objectForKey("FirstName") != nil){
             let temp = PFUser.currentUser().objectForKey("FirstName") as! String
-            FirstName.text = "First Name: " + temp
+            FirstName.text = "FirstName: " + temp
         }else{
-            FirstName.text = "First Name: "
+            FirstName.text = "FirstName: "
         }
         if(PFUser.currentUser()?.objectForKey("LastName") != nil){
             let temp = PFUser.currentUser().objectForKey("LastName") as! String
-            LastName.text = "Last Name: " + temp
+            LastName.text = "LastName:  " + temp
         }else{
-            LastName.text = "Last Name: "
+            LastName.text = "LastName:  "
         }
         if(PFUser.currentUser()?.objectForKey("User_Profile_Picture") != nil){
             let userImageProfile = PFUser.currentUser()?.objectForKey("User_Profile_Picture") as! PFFile
