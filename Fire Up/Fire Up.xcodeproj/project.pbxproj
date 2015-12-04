@@ -94,6 +94,7 @@
 		B1DDB02F1A68BB9700BE60E7 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1DDB02E1A68BB9700BE60E7 /* Accounts.framework */; };
 		B1F09A321A684808003DA14A /* ExImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = B1F09A311A684808003DA14A /* ExImageView.m */; };
 		E910DD1C1BC407E6006CA590 /* EditProfilePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */; };
+		E918C1581C10FAD800143991 /* EditProfileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E918C1571C10FAD800143991 /* EditProfileTableView.swift */; };
 		E987CAC81BE51597008CC6E2 /* PasswordRecover.swift in Sources */ = {isa = PBXBuildFile; fileRef = E987CAC71BE51597008CC6E2 /* PasswordRecover.swift */; };
 /* End PBXBuildFile section */
 
@@ -253,6 +254,7 @@
 		B1F09A301A684808003DA14A /* ExImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExImageView.h; sourceTree = "<group>"; };
 		B1F09A311A684808003DA14A /* ExImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExImageView.m; sourceTree = "<group>"; };
 		E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfilePage.swift; sourceTree = "<group>"; };
+		E918C1571C10FAD800143991 /* EditProfileTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileTableView.swift; sourceTree = "<group>"; };
 		E942C09D1C0E823800C51FCC /* Complain.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Complain.entitlements; sourceTree = "<group>"; };
 		E987CAC71BE51597008CC6E2 /* PasswordRecover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordRecover.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -489,6 +491,7 @@
 				00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */,
 				7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */,
 				7E012D641BC1CC520011B4D1 /* SignUp.swift */,
+				E918C1571C10FAD800143991 /* EditProfileTableView.swift */,
 				B169F03C1A62FEF500920072 /* MainPageTableViewController.swift */,
 				B169F03E1A62FF0900920072 /* MainPageTableViewCell.swift */,
 				B180445B1A689DB000A712F8 /* AddCommentsViewController.swift */,
@@ -715,6 +718,7 @@
 				7EC747451BEAB436002DAA0B /* JSQMessagesComposerTextView.m in Sources */,
 				7EC747271BEAB436002DAA0B /* UIColor+JSQMessages.m in Sources */,
 				B1B09D451A65F6C50092F109 /* DetailViewController.swift in Sources */,
+				E918C1581C10FAD800143991 /* EditProfileTableView.swift in Sources */,
 				B169EFF61A62FAF600920072 /* AppDelegate.swift in Sources */,
 				7EC747511BEAB4DB002DAA0B /* JSQSystemSoundPlayer.m in Sources */,
 				7EC747291BEAB436002DAA0B /* UIImage+JSQMessages.m in Sources */,

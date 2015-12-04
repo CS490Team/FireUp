@@ -1,24 +1,39 @@
 //
-//  EditProfilePage.swift
+//  EditProfileTableView.swift
 //  Fire Up
 //
-//  Created by HuangHanxun on 10/5/15.
+//  Created by Hanxun Huang on 12/3/15.
 //  Copyright © 2015 sunkai. All rights reserved.
 //
-import UIKit
-import Foundation
 
-class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+import Foundation
+class EditProfileTableView: UITableViewController,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     var currentUserString: String!
-    @IBOutlet var confirmPasswordTextField: UITextField!
-    @IBOutlet var firstNameTextField: UITextField!
-    @IBOutlet var lastNameTextField: UITextField!
-    @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var user_profile_image: UIImageView!
     var currentUser: PFUser!
+    
+    @IBOutlet var user_profile_image: UIImageView!
+    @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var firstNameTextField: UITextField!
+    @IBOutlet var confirmPasswordTextField: UITextField!
+    @IBOutlet var lastNameTextField: UITextField!
+    @IBOutlet var usernameTextField: UITextField!
+    @IBOutlet var emailTextField: UITextField!
+    
+    
+    @IBOutlet var saveButton: UIBarButtonItem!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.rightBarButtonItem = saveButton
+        self.usernameTextField.delegate = self
+        self.passwordTextField.delegate = self
+        self.firstNameTextField.delegate = self
+        self.lastNameTextField.delegate = self
+        self.emailTextField.delegate = self
+        self.confirmPasswordTextField.delegate = self
+        
+        usernameTextField.enabled = false;
+        emailTextField.enabled = false;
         currentUserString = PFUser.currentUser()!.username
         currentUser = PFUser.currentUser()
         
@@ -35,17 +50,34 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
                 self.user_profile_image.image = UIImage(data: imageData!)
             }
         }
-
+        usernameTextField.text = currentUser.username;
+        emailTextField.text = currentUser.email;
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+
+        usernameTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
+        firstNameTextField.resignFirstResponder()
+        lastNameTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+        confirmPasswordTextField.resignFirstResponder()
+
+        
+        return true
+    }
+    
     
     @IBAction func SelectProfile(sender: AnyObject) {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         self.presentViewController(pickerController, animated: true, completion: nil)
+        
     }
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         user_profile_image.image = image
@@ -74,39 +106,39 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
                 }
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)
+                
                 test = false
             }else{
                 currentUser.password = passwordTextField.text
-                print("not empty passwords")
             }
-            /*if(isEqual(confirmPasswordTextField.text == passwordTextField.text)){
-                print("match")
-            }else{
-                let userMessage = "Password not Match"
-                let alert = UIAlertController(title: "Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
-                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
-                }
-                alert.addAction(action)
-                self.presentViewController(alert, animated: true, completion: nil)
-                test = false
-            }*/
+            
         }
         if(test == true){
-        currentUser.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
-            if(success){
-                print("update Profile")
-                let userMessage = "ProfileUpdated!"
-                let alert = UIAlertController(title: "succeed", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
-                let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+            currentUser.saveInBackgroundWithBlock{ (success: Bool, error: NSError?) -> Void in
+                if(success){
+                    print("update Profile")
+                    let userMessage = "ProfileUpdated!"
+                    let alert = UIAlertController(title: "succeed", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+                    let action = UIAlertAction(title: "Ok", style: UIAlertActionStyle.Default){ action in
+                    }
+                    alert.addAction(action)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    let sb = UIStoryboard(name: "main", bundle: nil)
+                    let profileVC = sb.instantiateViewControllerWithIdentifier("ProfilePage")
+                    profileVC.navigationItem.setHidesBackButton(true, animated: false)
+                    self.navigationController?.pushViewController(profileVC, animated: true)
                 }
-                alert.addAction(action)
-                self.presentViewController(alert, animated: true, completion: nil)
-                self.performSegueWithIdentifier("ProfilePage", sender: self)
-
             }
         }
-        }
-        
         
     }
+
+    
+    
+    
+    
+    
+    
+    
+    
 }

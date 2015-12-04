@@ -37,8 +37,6 @@ class SignUp: UIViewController, UITextFieldDelegate{
         password.resignFirstResponder()
         confirm_password.resignFirstResponder()
         email.resignFirstResponder()
-        
-        
         return true
     }
     
