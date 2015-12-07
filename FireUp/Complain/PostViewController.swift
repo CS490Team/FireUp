@@ -11,6 +11,9 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
     @IBOutlet var addPhoto: UIButton!
     @IBOutlet var addText: UITextView!
     @IBOutlet var checkBox: UIButton!
+    @IBAction func changeImage(sender: UIButton){
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
