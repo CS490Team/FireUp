@@ -12,7 +12,11 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
     @IBOutlet var addText: UITextView!
     @IBOutlet var checkBox: UIButton!
     @IBAction func changeImage(sender: UIButton){
-        
+        if(sender.currentImage == UIImage(named: "check")){
+            checkBox.setImage(UIImage(named: "unckeck"), forState: .Normal)
+        }else{
+            checkBox.setImage(UIImage(named: "check"), forState: .Normal)
+        }
     }
     
     override func viewDidLoad() {
