@@ -11,6 +11,8 @@
 		7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E012D641BC1CC520011B4D1 /* SignUp.swift */; };
 		7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE351BEC0FE500494B44 /* MessageViewController.swift */; };
 		7E31EE391BEC47BB00494B44 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */; };
+		7E4973EF1C167ED5003BB278 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */; };
+		7E4973F11C16802E003BB278 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4973F01C16802E003BB278 /* CustomCell.swift */; };
 		7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */; };
 		7EC746BA1BEAB292002DAA0B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B31BEAB292002DAA0B /* Bolts.framework */; };
 		7EC746BE1BEAB292002DAA0B /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B71BEAB292002DAA0B /* ParseFacebookUtilsV4.framework */; };
@@ -114,6 +116,8 @@
 		7E31EE351BEC0FE500494B44 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		7E31EE371BEC47BB00494B44 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
 		7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
+		7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		7E4973F01C16802E003BB278 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 		7EC746B31BEAB292002DAA0B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7EC746B41BEAB292002DAA0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -486,6 +490,8 @@
 				E942C09D1C0E823800C51FCC /* Complain.entitlements */,
 				7EC746C11BEAB3F3002DAA0B /* JSQ */,
 				B169EFF51A62FAF600920072 /* AppDelegate.swift */,
+				7E4973F01C16802E003BB278 /* CustomCell.swift */,
+				7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */,
 				E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */,
 				B169EFFC1A62FAF600920072 /* Main.storyboard */,
 				00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */,
@@ -697,6 +703,7 @@
 			files = (
 				7EC7474A1BEAB436002DAA0B /* JSQMessagesMediaPlaceholderView.m in Sources */,
 				7EC7473C1BEAB436002DAA0B /* JSQPhotoMediaItem.m in Sources */,
+				7E4973EF1C167ED5003BB278 /* SignUpTableViewController.swift in Sources */,
 				7EC747471BEAB436002DAA0B /* JSQMessagesLabel.m in Sources */,
 				B180445C1A689DB000A712F8 /* AddCommentsViewController.swift in Sources */,
 				7EC7473D1BEAB436002DAA0B /* JSQVideoMediaItem.m in Sources */,
@@ -716,6 +723,7 @@
 				E987CAC81BE51597008CC6E2 /* PasswordRecover.swift in Sources */,
 				7EC7472F1BEAB436002DAA0B /* JSQMessagesBubbleImageFactory.m in Sources */,
 				7EC747451BEAB436002DAA0B /* JSQMessagesComposerTextView.m in Sources */,
+				7E4973F11C16802E003BB278 /* CustomCell.swift in Sources */,
 				7EC747271BEAB436002DAA0B /* UIColor+JSQMessages.m in Sources */,
 				B1B09D451A65F6C50092F109 /* DetailViewController.swift in Sources */,
 				E918C1581C10FAD800143991 /* EditProfileTableView.swift in Sources */,
