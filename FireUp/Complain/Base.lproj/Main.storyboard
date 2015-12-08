@@ -233,7 +233,7 @@
                                 </state>
                                 <connections>
                                     <action selector="signup:" destination="Nhz-3R-PGx" eventType="touchUpInside" id="8Ky-Hu-uAa"/>
-                                    <segue destination="DUY-5G-FFR" kind="push" id="Klq-hX-Ccs"/>
+                                    <segue destination="8Vc-6v-fym" kind="push" id="pmT-6n-81b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -297,9 +297,6 @@
                                 <rect key="frame" x="115" y="479" width="94" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                                <connections>
-                                    <segue destination="Nhz-3R-PGx" kind="push" id="NcJ-pV-VjR"/>
-                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" id="FPG-WG-vtB">
                                 <rect key="frame" x="66" y="162" width="192" height="30"/>
@@ -312,14 +309,6 @@
                                 <rect key="frame" x="249" y="245" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="czs-Yo-54M">
-                                <rect key="frame" x="254" y="473" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <segue destination="8Vc-6v-fym" kind="push" id="kRr-oM-FIk"/>
-                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -336,7 +325,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bq5-Rd-MDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="943" y="-368"/>
+            <point key="canvasLocation" x="1329" y="-368"/>
         </scene>
         <!--Main Page Table View Controller-->
         <scene sceneID="uMZ-7H-Ihu">
@@ -1240,17 +1229,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i2a-37-DJk">
-                                                    <rect key="frame" x="167" y="0.0" width="153" height="139.5"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Select Image">
-                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5V5-P5-Sba">
                                                     <rect key="frame" x="0.0" y="0.0" width="166" height="139.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="i2a-37-DJk">
+                                                    <rect key="frame" x="167" y="0.0" width="153" height="140"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Select Image">
+                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="SelectProfile:" destination="8Vc-6v-fym" eventType="touchUpInside" id="83l-jL-fNg"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1301,7 +1293,7 @@
                                                     <rect key="frame" x="8" y="7" width="312" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1317,7 +1309,7 @@
                                                     <rect key="frame" x="8" y="7" width="312" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -1408,6 +1400,7 @@
                         <outlet property="selectImageButton" destination="i2a-37-DJk" id="zj4-Hn-lr7"/>
                         <outlet property="signUpButtonCell" destination="NTX-UM-nrB" id="4vN-Q9-RLo"/>
                         <outlet property="username" destination="u2s-1N-6Gx" id="KTs-d5-V0B"/>
+                        <segue destination="Nhz-3R-PGx" kind="push" identifier="BackToLogin" id="rnU-eu-n0J"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KXc-jK-bzL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1418,7 +1411,7 @@
                     <textInputTraits key="textInputTraits"/>
                 </textField>
             </objects>
-            <point key="canvasLocation" x="1336" y="-368"/>
+            <point key="canvasLocation" x="924" y="-455"/>
         </scene>
     </scenes>
     <resources>
@@ -1428,8 +1421,8 @@
         <image name="check" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6uJ-ER-RQO"/>
-        <segue reference="NcJ-pV-VjR"/>
+        <segue reference="rnU-eu-n0J"/>
+        <segue reference="MSZ-3c-Rl3"/>
         <segue reference="PUi-nV-eQ5"/>
     </inferredMetricsTieBreakers>
 </document>

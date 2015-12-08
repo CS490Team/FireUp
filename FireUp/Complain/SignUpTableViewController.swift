@@ -151,9 +151,10 @@ class SignUpTableViewController: UITableViewController,UITextFieldDelegate,UIIma
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         }
+        NSThread.sleepForTimeInterval(2)
+        self.performSegueWithIdentifier("BackToLogin", sender: self)
     }
 
-    
     
     
     

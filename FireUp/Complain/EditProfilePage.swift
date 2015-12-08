@@ -101,7 +101,7 @@ class EditProfilePage: UIViewController,UITextFieldDelegate,UIImagePickerControl
                 }
                 alert.addAction(action)
                 self.presentViewController(alert, animated: true, completion: nil)
-                self.performSegueWithIdentifier("ProfilePage", sender: self)
+                self.performSegueWithIdentifier("BackToProfilePage", sender: self)
 
             }
         }
