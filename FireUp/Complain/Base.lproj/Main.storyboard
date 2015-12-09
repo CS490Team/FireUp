@@ -1306,7 +1306,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n1w-PX-z46">
                                                     <rect key="frame" x="160" y="105" width="74" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.12549020349979401" green="0.56470590829849243" blue="0.83137261867523193" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" red="0.11372549019607843" green="0.48627450980392156" blue="0.78823529411764703" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <state key="normal" title="Follow">
                                                         <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>

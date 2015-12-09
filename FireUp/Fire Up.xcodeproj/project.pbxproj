@@ -16,6 +16,7 @@
 		7E4973F11C16802E003BB278 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4973F01C16802E003BB278 /* CustomCell.swift */; };
 		7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */; };
 		7EBB95A61C18BBB500D5A0F8 /* ViewOtherUserProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBB95A51C18BBB500D5A0F8 /* ViewOtherUserProfileTableViewController.swift */; };
+		7EBB95A81C18D2AB00D5A0F8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EBB95A71C18D2AB00D5A0F8 /* MapKit.framework */; };
 		7EC746BA1BEAB292002DAA0B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B31BEAB292002DAA0B /* Bolts.framework */; };
 		7EC746BE1BEAB292002DAA0B /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B71BEAB292002DAA0B /* ParseFacebookUtilsV4.framework */; };
 		7EC746BF1BEAB292002DAA0B /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B81BEAB292002DAA0B /* ParseTwitterUtils.framework */; };
@@ -123,6 +124,7 @@
 		7E4973F01C16802E003BB278 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 		7EBB95A51C18BBB500D5A0F8 /* ViewOtherUserProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOtherUserProfileTableViewController.swift; sourceTree = "<group>"; };
+		7EBB95A71C18D2AB00D5A0F8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		7EC746B31BEAB292002DAA0B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7EC746B41BEAB292002DAA0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		7EC746B51BEAB292002DAA0B /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseCrashReporting.framework; sourceTree = "<group>"; };
@@ -276,6 +278,7 @@
 				7EC746BA1BEAB292002DAA0B /* Bolts.framework in Frameworks */,
 				7EC746C01BEAB292002DAA0B /* ParseUI.framework in Frameworks */,
 				B1DDB02D1A68BB9200BE60E7 /* Social.framework in Frameworks */,
+				7EBB95A81C18D2AB00D5A0F8 /* MapKit.framework in Frameworks */,
 				B169F02D1A62FBE900920072 /* SystemConfiguration.framework in Frameworks */,
 				B169F02B1A62FBD100920072 /* StoreKit.framework in Frameworks */,
 				B169F0291A62FBBC00920072 /* Security.framework in Frameworks */,
@@ -472,6 +475,7 @@
 		B169EFE71A62FAF600920072 = {
 			isa = PBXGroup;
 			children = (
+				7EBB95A71C18D2AB00D5A0F8 /* MapKit.framework */,
 				B169F02E1A62FBF700920072 /* framework */,
 				B169EFF21A62FAF600920072 /* Complain */,
 				B169F00B1A62FAF600920072 /* ComplainTests */,
@@ -637,6 +641,9 @@
 						DevelopmentTeam = RRE3H52SR5;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
 							com.apple.Push = {
