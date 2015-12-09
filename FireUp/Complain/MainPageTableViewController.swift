@@ -92,6 +92,31 @@ class MainPageTableViewController: PFQueryTableViewController{
             }
         })
         
+        let share = self.objects[indexPath.row].valueForKey("locationShare")! as! Bool
+        if(share){
+            let descLocation: PFGeoPoint = self.objects[indexPath.row].valueForKey("location")! as! PFGeoPoint
+            let geoCoder = CLGeocoder()
+            let location = CLLocation(latitude: descLocation.latitude, longitude: descLocation.longitude)
+            
+            geoCoder.reverseGeocodeLocation(location, completionHandler: { (placemarks, error) -> Void in
+                let placeArray = placemarks! as [CLPlacemark]
+                
+                // Place details
+                var placeMark: CLPlacemark!
+                placeMark = placeArray[0]
+                
+                // Address dictionary
+                
+                let city = placeMark.addressDictionary!["City"] as? String
+                let state = placeMark.addressDictionary!["State"] as? String
+                let locationInfo:String = city! + ", " + state!
+                cell.Location.setTitle(locationInfo, forState: .Normal)
+                cell.LocationImage.setImage(UIImage(named: "map_icon"), forState: .Normal)
+                
+            })
+        }
+
+        
         
         //print(cell.thumbnailImage.file)
 
