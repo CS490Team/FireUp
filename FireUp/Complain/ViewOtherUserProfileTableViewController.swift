@@ -96,6 +96,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             if error == nil{
                 if results.count>0 {
                     self.unfollowUer()
+                    NSThread.sleepForTimeInterval(1)
                     self.viewDidLoad()
                 }else{
                     self.followUser()
