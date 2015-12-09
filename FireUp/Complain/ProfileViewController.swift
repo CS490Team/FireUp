@@ -27,6 +27,11 @@ class ProfileViewController: UITableViewController,UITextFieldDelegate,UIImagePi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        email.userInteractionEnabled = false
+        username.userInteractionEnabled = false
+        FirstName.userInteractionEnabled = false
+        LastName.userInteractionEnabled = false
+
         userDataCell.selectionStyle = UITableViewCellSelectionStyle.None
         firstnameCell.selectionStyle = UITableViewCellSelectionStyle.None
         lastnameCell.selectionStyle = UITableViewCellSelectionStyle.None
