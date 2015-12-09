@@ -90,12 +90,19 @@
                                             <rect key="frame" x="8" y="15" width="60" height="60"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <view hidden="YES" contentMode="scaleToFill" id="qB3-Or-98A">
+                                            <rect key="frame" x="0.0" y="0.0" width="8" height="80"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" red="0.16078431904315948" green="0.70196080207824707" blue="0.88627457618713379" alpha="0.78000000000000003" colorSpace="deviceRGB"/>
+                                            <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
                                     </subviews>
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
                                     <outlet property="dateLabel" destination="A5h-8O-sbv" id="uvd-u9-CUD"/>
+                                    <outlet property="messageIndicator" destination="qB3-Or-98A" id="f9t-Bq-rp0"/>
                                     <outlet property="messageLabel" destination="99z-mk-dn1" id="pG0-rU-Ymh"/>
                                     <outlet property="userProfileImage" destination="L07-Q1-40F" id="2BE-cq-0fd"/>
                                     <outlet property="usernameLabel" destination="F72-WL-e7C" id="Pue-WF-xbd"/>

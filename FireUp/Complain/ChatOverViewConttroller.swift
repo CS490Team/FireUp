@@ -11,6 +11,7 @@ import UIKit
 
 class ChatOverViewConttroller: UITableViewController {
     @IBOutlet var AddContactButton: UIBarButtonItem!
+    @IBOutlet var newMessageIndicator: UIView!
     
     var rooms = [PFObject]()
     var users = [PFUser]()
@@ -18,6 +19,7 @@ class ChatOverViewConttroller: UITableViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "displayPushMessages", name: "displayMessages", object: nil)
+        self.tableView.reloadData()
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -71,7 +73,6 @@ class ChatOverViewConttroller: UITableViewController {
                     
                 }
                 self.tableView.reloadData()
-            
             }
         })
     }
@@ -97,6 +98,9 @@ class ChatOverViewConttroller: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! OverviewTableViewCell
+        
+        cell.messageIndicator.hidden = true
+        
         
         let targetUser = users[indexPath.row]
         cell.usernameLabel.text = targetUser.username
@@ -126,14 +130,30 @@ class ChatOverViewConttroller: UITableViewController {
                 if results.count>0 {
                     let messageQuery = PFQuery(className: "Message")
                     let room = results.last as! PFObject
+                    
+                    let unreadQuery = PFQuery(className: "UnreadMessage")
+                    unreadQuery.whereKey("User", equalTo: PFUser.currentUser())
+                    unreadQuery.whereKey("Room", equalTo: room)
+                    
+                    unreadQuery.findObjectsInBackgroundWithBlock({ (results:[AnyObject]!, error: NSError!) -> Void in
+                        
+                        if error == nil {
+                            if results.count > 0{
+                                cell.messageIndicator.hidden = false
+                            }
+                        }
+                        
+                    })
+                    
                     messageQuery.whereKey("room", equalTo: room)
                     messageQuery.limit = 1
-                    messageQuery.orderByAscending("createdAt")
+                    messageQuery.orderByDescending("createdAt")
                     messageQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
                         if error == nil{
                             if results.count>0 {
                                 let message = results.last as! PFObject
                                 cell.messageLabel.text = message["content"] as! String
+                                print(cell.messageLabel.text)
                                 let date = message.createdAt
                                 let interval = NSDate().daysAfterDate(date)
                                 var dateString = ""

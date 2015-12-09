@@ -100,8 +100,7 @@ class MessageViewController: JSQMessagesViewController {
         if lastMessage != nil{
             messageQuery.whereKey("createdAt", greaterThan: lastMessage!.date)
         }
-        print("here");
-        print(self.room)
+
 
         messageQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
             if error == nil{
@@ -114,8 +113,6 @@ class MessageViewController: JSQMessagesViewController {
                     
                     let chatMessage = JSQMessage(senderId: user.objectId, senderDisplayName: user.username, date: message.createdAt, text: message["content"] as! String)
                     self.messages.append(chatMessage)
-                    print("here inside")
-                    print(message["content"])
                 }
             }
             if results.count != 0{
@@ -142,9 +139,14 @@ class MessageViewController: JSQMessagesViewController {
                 let pushDictionary = ["alert":text, "badge":"increment", "sound":""]
                 push.setData(pushDictionary)
                 push.sendPushInBackgroundWithBlock(nil)
-                
+                print(NSDate())
                 self.room["LastUpdate"] = NSDate()
                 self.room.saveInBackgroundWithBlock(nil)
+                let unreadMessage = PFObject(className: "UnreadMessage")
+                unreadMessage["User"] = self.incomingUser
+                unreadMessage["Room"] = self.room
+                unreadMessage.saveInBackgroundWithBlock(nil)
+                
             }else {
                 print("error sending message")
                 

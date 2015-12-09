@@ -13,7 +13,6 @@
 		7E31EE391BEC47BB00494B44 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */; };
 		7E4973EF1C167ED5003BB278 /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */; };
 		7E4973F11C16802E003BB278 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4973F01C16802E003BB278 /* CustomCell.swift */; };
-		7E4973F31C17DA24003BB278 /* ChatOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E4973F21C17DA24003BB278 /* ChatOverviewTableViewCell.swift */; };
 		7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */; };
 		7EC746BA1BEAB292002DAA0B /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B31BEAB292002DAA0B /* Bolts.framework */; };
 		7EC746BE1BEAB292002DAA0B /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EC746B71BEAB292002DAA0B /* ParseFacebookUtilsV4.framework */; };
@@ -119,7 +118,6 @@
 		7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Utilities.m"; sourceTree = "<group>"; };
 		7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		7E4973F01C16802E003BB278 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		7E4973F21C17DA24003BB278 /* ChatOverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatOverviewTableViewCell.swift; sourceTree = "<group>"; };
 		7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverviewTableViewCell.swift; sourceTree = "<group>"; };
 		7EC746B31BEAB292002DAA0B /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		7EC746B41BEAB292002DAA0B /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -492,7 +490,6 @@
 				E942C09D1C0E823800C51FCC /* Complain.entitlements */,
 				7EC746C11BEAB3F3002DAA0B /* JSQ */,
 				B169EFF51A62FAF600920072 /* AppDelegate.swift */,
-				7E4973F21C17DA24003BB278 /* ChatOverviewTableViewCell.swift */,
 				7E4973F01C16802E003BB278 /* CustomCell.swift */,
 				7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */,
 				E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */,
@@ -738,7 +735,6 @@
 				E910DD1C1BC407E6006CA590 /* EditProfilePage.swift in Sources */,
 				7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */,
 				7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */,
-				7E4973F31C17DA24003BB278 /* ChatOverviewTableViewCell.swift in Sources */,
 				7EC7473B1BEAB436002DAA0B /* JSQMessagesBubbleImage.m in Sources */,
 				7EC747261BEAB436002DAA0B /* NSString+JSQMessages.m in Sources */,
 				7EC7472A1BEAB436002DAA0B /* UIView+JSQMessages.m in Sources */,

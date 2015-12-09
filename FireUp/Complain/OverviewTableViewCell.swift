@@ -14,6 +14,7 @@ class OverviewTableViewCell: UITableViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var usernameLabel: UILabel!
 
+    @IBOutlet var messageIndicator: UIView!
     @IBOutlet var userProfileImage: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
