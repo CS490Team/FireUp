@@ -13,7 +13,8 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
     
     
     @IBOutlet var addPhoto: UIButton!
-    @IBOutlet var addText: UITextView!
+    
+    @IBOutlet weak var addText: UITextField!
     @IBOutlet weak var addRecipe: UITextView!
     @IBOutlet var checkBox: UIButton!
     @IBAction func changeImage(sender: UIButton){
