@@ -11,7 +11,6 @@ import UIKit
 
 class ChatOverViewConttroller: UITableViewController {
     @IBOutlet var AddContactButton: UIBarButtonItem!
-    @IBOutlet var newMessageIndicator: UIView!
     
     var rooms = [PFObject]()
     var users = [PFUser]()
@@ -136,11 +135,13 @@ class ChatOverViewConttroller: UITableViewController {
                     unreadQuery.whereKey("Room", equalTo: room)
                     
                     unreadQuery.findObjectsInBackgroundWithBlock({ (results:[AnyObject]!, error: NSError!) -> Void in
-                        
+                        print(room.objectId)
                         if error == nil {
                             if results.count > 0{
                                 cell.messageIndicator.hidden = false
                             }
+                        }else{
+                            print("UnreadMessage Error")
                         }
                         
                     })
@@ -195,6 +196,28 @@ class ChatOverViewConttroller: UITableViewController {
                 messagesVC.room = room
                 messagesVC.incomingUser = user2
                 self.navigationController?.pushViewController(messagesVC, animated: true)
+                
+                
+                let unreadQuery = PFQuery(className: "UnreadMessage")
+                unreadQuery.whereKey("User", equalTo: PFUser.currentUser())
+                unreadQuery.whereKey("Room", equalTo: room)
+                
+                unreadQuery.findObjectsInBackgroundWithBlock({ (results:[AnyObject]!, error: NSError!) -> Void in
+                    print(room.objectId)
+                    if error == nil {
+                        if results.count > 0{
+                            let unreadMessages = results as! [PFObject]
+                            for msg in unreadMessages{
+                                msg.deleteInBackgroundWithBlock(nil)
+                            }
+                        }
+                    }else{
+                        print("UnreadMessage Error")
+                    }
+                    
+                })
+                
+                
             }
         }
     }

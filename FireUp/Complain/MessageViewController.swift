@@ -142,6 +142,7 @@ class MessageViewController: JSQMessagesViewController {
                 print(NSDate())
                 self.room["LastUpdate"] = NSDate()
                 self.room.saveInBackgroundWithBlock(nil)
+                
                 let unreadMessage = PFObject(className: "UnreadMessage")
                 unreadMessage["User"] = self.incomingUser
                 unreadMessage["Room"] = self.room

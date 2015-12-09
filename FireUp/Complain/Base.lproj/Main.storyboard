@@ -102,7 +102,7 @@
                                 <animations/>
                                 <connections>
                                     <outlet property="dateLabel" destination="A5h-8O-sbv" id="uvd-u9-CUD"/>
-                                    <outlet property="messageIndicator" destination="qB3-Or-98A" id="f9t-Bq-rp0"/>
+                                    <outlet property="messageIndicator" destination="qB3-Or-98A" id="o1p-UO-LRw"/>
                                     <outlet property="messageLabel" destination="99z-mk-dn1" id="pG0-rU-Ymh"/>
                                     <outlet property="userProfileImage" destination="L07-Q1-40F" id="2BE-cq-0fd"/>
                                     <outlet property="usernameLabel" destination="F72-WL-e7C" id="Pue-WF-xbd"/>
