@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -624,7 +624,7 @@
 				LastSwiftMigration = 0710;
 				LastSwiftUpdateCheck = 0710;
 				LastUpgradeCheck = 0710;
-				ORGANIZATIONNAME = sunkai;
+				ORGANIZATIONNAME = "";
 				TargetAttributes = {
 					B169EFEF1A62FAF600920072 = {
 						CreatedOnToolsVersion = 6.2;
@@ -640,7 +640,7 @@
 								enabled = 0;
 							};
 							com.apple.iCloud = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
@@ -651,7 +651,7 @@
 				};
 			};
 			buildConfigurationList = B169EFEB1A62FAF600920072 /* Build configuration list for PBXProject "Fire Up" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
