@@ -62,7 +62,6 @@ class MainPageTableViewController: PFQueryTableViewController{
         
         cell.TheText.text = self.objects[indexPath.row].valueForKey("text")! as! String
         cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
-        
         print(cell.TheImage.file)
         
        // let UserID = self.objects[indexPath.row].valueForKey("feeder")
@@ -121,15 +120,6 @@ class MainPageTableViewController: PFQueryTableViewController{
             let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
             VC.TRImage = cell.TheImage.image
             VC.TRUsername = cell.Username
-        }
-        if(segue.identifier == "toRecipe"){
-            let VC = segue.destinationViewController as! ViewRecipe
-            let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
-            let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
-            let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
-            //VC.TRTitle = cell.Title
-            VC.TRImage = cell.TheImage.image
-            //VC.TRRecipe = self.objects[indexPath!.row].valueForKey("recipe")! as! String
         }
     }
     

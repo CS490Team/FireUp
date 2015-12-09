@@ -10,7 +10,6 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
 
     @IBOutlet var addPhoto: UIButton!
     @IBOutlet var addText: UITextView!
-    @IBOutlet var addRecipe: UITextView!
     @IBOutlet var checkBox: UIButton!
     @IBAction func changeImage(sender: UIButton){
         if(sender.currentImage == UIImage(named: "check")){
@@ -91,7 +90,6 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
     func rightBarButtonAction(){
         let post = PFObject(className: "feed")
         post["text"] = addText.text
-        post["recipe"] = addRecipe.text
         
         let orginImage = addPhoto.currentImage!
         let resizedImage = shouldUpload(orginImage)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		001735601C17A2AC00823E79 /* ViewRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0017355F1C17A2AC00823E79 /* ViewRecipe.swift */; };
 		00858BD01BEC6D9E00205E6D /* ViewProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */; };
 		7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E012D641BC1CC520011B4D1 /* SignUp.swift */; };
 		7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE351BEC0FE500494B44 /* MessageViewController.swift */; };
@@ -112,7 +111,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0017355F1C17A2AC00823E79 /* ViewRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRecipe.swift; sourceTree = "<group>"; };
 		00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProfile.swift; sourceTree = "<group>"; };
 		7E012D641BC1CC520011B4D1 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		7E31EE351BEC0FE500494B44 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
@@ -496,7 +494,6 @@
 				7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */,
 				E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */,
 				B169EFFC1A62FAF600920072 /* Main.storyboard */,
-				0017355F1C17A2AC00823E79 /* ViewRecipe.swift */,
 				00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */,
 				7E85C03E1BEBA16A002D4437 /* OverviewTableViewCell.swift */,
 				7E012D641BC1CC520011B4D1 /* SignUp.swift */,
@@ -743,7 +740,6 @@
 				7EC7472A1BEAB436002DAA0B /* UIView+JSQMessages.m in Sources */,
 				7EC747401BEAB436002DAA0B /* JSQMessagesCollectionViewCell.m in Sources */,
 				7EC747481BEAB436002DAA0B /* JSQMessagesLoadEarlierHeaderView.m in Sources */,
-				001735601C17A2AC00823E79 /* ViewRecipe.swift in Sources */,
 				B1DDB02B1A68B9DD00BE60E7 /* Login.swift in Sources */,
 				7EC7473A1BEAB436002DAA0B /* JSQMessagesAvatarImage.m in Sources */,
 				7EC7474B1BEAB436002DAA0B /* JSQMessagesToolbarContentView.m in Sources */,
