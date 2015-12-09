@@ -56,7 +56,7 @@ class MessageViewController: JSQMessagesViewController {
             incoming_profileImageFile.getDataInBackgroundWithBlock{ (incominguserdata:NSData!, incoming_error:NSError!) -> Void in
                 if incoming_error == nil {
                     let incomingImage = UIImage(data: incominguserdata)
-                     self.selfAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(incomingImage, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+                     self.incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(incomingImage, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
                 }
             }
         }
