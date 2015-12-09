@@ -39,7 +39,27 @@ class MessageViewController: JSQMessagesViewController {
         let incomingUsername = incomingUser.username as! NSString
         selfAvatar = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials(selfUsername.substringWithRange(NSMakeRange(0,2)), backgroundColor: UIColor.blackColor(), textColor: UIColor.whiteColor(), font: UIFont.systemFontOfSize(14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
         incomingAvatar = JSQMessagesAvatarImageFactory.avatarImageWithUserInitials(selfUsername.substringWithRange(NSMakeRange(0,2)), backgroundColor: UIColor.blackColor(), textColor: UIColor.whiteColor(), font: UIFont.systemFontOfSize(14), diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
-
+        
+        if PFUser.currentUser()["User_Profile_Picture"] != nil {
+            let self_profileImageFile = PFUser.currentUser()["User_Profile_Picture"] as! PFFile
+            self_profileImageFile.getDataInBackgroundWithBlock{ (selfdata:NSData!, self_error:NSError!) -> Void in
+                if self_error == nil {
+                    let selfImage = UIImage(data: selfdata)
+                    self.selfAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(selfImage, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+                    
+                }
+            }
+        }
+        
+        if incomingUser["User_Profile_Picture"] != nil {
+            let incoming_profileImageFile = incomingUser["User_Profile_Picture"] as! PFFile
+            incoming_profileImageFile.getDataInBackgroundWithBlock{ (incominguserdata:NSData!, incoming_error:NSError!) -> Void in
+                if incoming_error == nil {
+                    let incomingImage = UIImage(data: incominguserdata)
+                     self.selfAvatar = JSQMessagesAvatarImageFactory.avatarImageWithImage(incomingImage, diameter: UInt(kJSQMessagesCollectionViewAvatarSizeDefault))
+                }
+            }
+        }
         
         let bubbleFactory = JSQMessagesBubbleImageFactory()
         outgoingBubleImage = bubbleFactory.outgoingMessagesBubbleImageWithColor(UIColor.lightGrayColor())
