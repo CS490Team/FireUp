@@ -115,7 +115,7 @@ class MainPageTableViewController: PFQueryTableViewController{
             VC.TRImage = cell.TheImage.image
         }
         if(segue.identifier == "toProfile"){
-            let VC = segue.destinationViewController as! ViewProfile
+            let VC = segue.destinationViewController as! ViewOtherUserProfileTableViewController
             let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
             let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
             let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
