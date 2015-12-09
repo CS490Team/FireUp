@@ -903,11 +903,11 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Complain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FireUp;
 				PRODUCT_NAME = Complain;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b099cc18-8607-46d9-a6d0-49dfb96f1c09";
 				SWIFT_OBJC_BRIDGING_HEADER = "Complain/Complain-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -926,11 +926,11 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Complain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FireUp;
 				PRODUCT_NAME = Complain;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "b099cc18-8607-46d9-a6d0-49dfb96f1c09";
 				SWIFT_OBJC_BRIDGING_HEADER = "Complain/Complain-Bridging-Header.h";
 			};
 			name = Release;

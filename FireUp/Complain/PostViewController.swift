@@ -11,6 +11,7 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
     var descLocation: PFGeoPoint = PFGeoPoint()
     let locationManager = CLLocationManager()
     
+    
     @IBOutlet var addPhoto: UIButton!
     @IBOutlet var addText: UITextView!
     @IBOutlet weak var addRecipe: UITextView!
@@ -69,8 +70,7 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
         let userLocation:CLLocation = locations[0]
         let long = userLocation.coordinate.longitude;
         let lat = userLocation.coordinate.latitude;
-        print(long)
-        print(lat)
+        descLocation = PFGeoPoint(latitude: lat, longitude: long)
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
@@ -117,6 +117,13 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
         
         let imageData = UIImagePNGRepresentation(resizedImage)
         let imageFile = PFFile(name:"image.png", data:imageData!)
+        
+        if(checkBox.currentImage == UIImage(named: "check")){
+            post["locationShare"] = true
+            post["location"] = descLocation
+        }else{
+            post["locationShare"] = false
+        }
         
         post["image"] = imageFile
         post["feeder"] = PFUser.currentUser()
