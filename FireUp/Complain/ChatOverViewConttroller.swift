@@ -103,6 +103,22 @@ class ChatOverViewConttroller: UITableViewController {
         
         let user1 = PFUser.currentUser()
         let user2 = users[indexPath.row]
+        
+        
+       
+        if user2["User_Profile_Picture"] != nil {
+            let profileImageFile = user2["User_Profile_Picture"] as! PFFile
+            profileImageFile.getDataInBackgroundWithBlock{ (data:NSData!, error:NSError!) -> Void in
+                if error == nil {
+                    cell.userProfileImage.image = UIImage(data: data)
+                
+                }
+            }
+        }
+        
+        
+        
+        
         let pred = NSPredicate(format: "user1 = %@ AND user2= %@ OR user1 = %@ AND user2 = %@", user1,user2,user2,user1)
         let roomQuery = PFQuery(className: "ChatRoom", predicate: pred)
         roomQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
