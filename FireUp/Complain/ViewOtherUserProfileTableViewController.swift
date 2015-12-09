@@ -20,6 +20,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     var targetUser:PFUser!
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(TRUsername)
         usernameTextField.text = TRUsername
         let usernameQuery = PFQuery(className: "_User")
         print(TRUsername)
