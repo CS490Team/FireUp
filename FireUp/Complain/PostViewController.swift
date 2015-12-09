@@ -6,8 +6,11 @@
 
 import UIKit
 
-class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate, CLLocationManagerDelegate{
 
+    var descLocation: PFGeoPoint = PFGeoPoint()
+    let locationManager = CLLocationManager()
+    
     @IBOutlet var addPhoto: UIButton!
     @IBOutlet var addText: UITextView!
     @IBOutlet weak var addRecipe: UITextView!
@@ -24,6 +27,10 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
         super.viewDidLoad()
         addRightBarItem()
         addLeftBarItem()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,6 +59,18 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
                 self.navigationController?.presentViewController(imagePicker, animated: true, completion: nil)
             }
         }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error while updating location " + error.localizedDescription)
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0]
+        let long = userLocation.coordinate.longitude;
+        let lat = userLocation.coordinate.latitude;
+        print(long)
+        print(lat)
     }
     
     func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: [NSObject : AnyObject]!) {
