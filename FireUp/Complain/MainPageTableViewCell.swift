@@ -19,4 +19,7 @@ class MainPageTableViewCell: UITableViewCell {
     @IBOutlet var thumbnailImage: PFImageView! = PFImageView()
     
     var Username:String!
+    var Title:String!
+    var Recipe:String!
+    
 }
