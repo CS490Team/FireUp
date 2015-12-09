@@ -52,7 +52,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="iSG-Qf-YWL" customClass="OverviewTableViewCell" customModule="Complain" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iSG-Qf-YWL" id="u9v-Jc-IyQ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89.5"/>
@@ -942,20 +942,27 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="confirmPasswordCell" destination="Mwx-K7-DD1" id="rFm-QG-fC9"/>
                         <outlet property="confirmPasswordTextField" destination="xKs-bb-lOi" id="PH4-ch-TMH"/>
+                        <outlet property="emailCell" destination="ZgR-7M-8o7" id="B5G-43-OfB"/>
                         <outlet property="emailTextField" destination="lCO-fe-omu" id="H2H-uo-R6U"/>
                         <outlet property="firstNameTextField" destination="vgm-Oc-7YW" id="RJp-YW-m7d"/>
+                        <outlet property="firstnameCell" destination="zKC-d6-0QE" id="0eN-jQ-kLO"/>
                         <outlet property="lastNameTextField" destination="EAQ-PM-D2Y" id="H7b-hi-wGN"/>
+                        <outlet property="lastnameCell" destination="5IR-L9-81I" id="W80-I8-gvG"/>
+                        <outlet property="passwordCell" destination="vqL-ug-ckx" id="3qR-MV-8Nm"/>
                         <outlet property="passwordTextField" destination="YBR-dk-jPn" id="lWJ-4L-qMF"/>
                         <outlet property="saveButton" destination="4jB-9K-fZB" id="KJc-rb-AJp"/>
+                        <outlet property="userDataCell" destination="NfA-qD-3ua" id="GTs-Ne-Itz"/>
                         <outlet property="user_profile_image" destination="w3j-RS-6b7" id="R8d-A1-eC4"/>
+                        <outlet property="usernameCell" destination="xRo-OT-r8w" id="FuN-yO-hyw"/>
                         <outlet property="usernameTextField" destination="t43-ez-d7h" id="yfz-4B-J92"/>
                         <segue destination="v7p-JD-WXM" kind="push" identifier="EditBackToProfile" id="PUi-nV-eQ5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFd-05-iri" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-238" y="2582"/>
+            <point key="canvasLocation" x="-158" y="2184"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="bO0-gE-tqU">
@@ -1077,7 +1084,10 @@
                         <outlet property="FirstName" destination="Mzg-Cs-Cd1" id="D0J-Jl-FIC"/>
                         <outlet property="LastName" destination="eUG-wc-G9p" id="Irp-KM-5Vt"/>
                         <outlet property="email" destination="YVJ-k3-aYq" id="fxb-hK-8O5"/>
+                        <outlet property="firstnameCell" destination="get-ZO-MPw" id="Q2e-bu-n3b"/>
+                        <outlet property="lastnameCell" destination="v1R-VS-F2f" id="n1c-mx-G09"/>
                         <outlet property="logOutButton" destination="A0I-rK-fLm" id="Dy0-1d-m9w"/>
+                        <outlet property="userDataCell" destination="xBx-6D-Ffl" id="Vfd-zo-E40"/>
                         <outlet property="user_profile_image" destination="Vbx-7z-oSg" id="Yvj-XF-qvV"/>
                         <outlet property="username" destination="fsx-mv-hnq" id="NNL-la-kN9"/>
                         <segue destination="Nhz-3R-PGx" kind="push" identifier="ProfileToLogin" id="2Vo-Ff-LrD"/>
@@ -1529,32 +1539,26 @@
                         <sections>
                             <tableViewSection headerTitle="Profile Picture" id="N46-2S-0pk">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="140" id="es6-wQ-tyt">
-                                        <rect key="frame" x="0.0" y="113.5" width="320" height="140"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="164" id="Wdk-Bq-Pbz">
+                                        <rect key="frame" x="0.0" y="113.5" width="320" height="164"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="es6-wQ-tyt" id="kQH-QN-DlW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="139.5"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wdk-Bq-Pbz" id="t7t-2g-PcI">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="163.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="Jjl-YW-6gx">
-                                                    <rect key="frame" x="0.0" y="3" width="140" height="128.5"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="jH0-lu-Ifa">
+                                                    <rect key="frame" x="8" y="23" width="144" height="118"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oIb-Sb-h4A">
-                                                    <rect key="frame" x="148" y="99" width="69" height="32"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="n1w-PX-z46">
+                                                    <rect key="frame" x="160" y="105" width="74" height="36"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" red="0.17647059261798859" green="0.79607850313186646" blue="0.96078437566757202" alpha="1" colorSpace="deviceRGB"/>
+                                                    <color key="backgroundColor" red="0.12549020349979401" green="0.56470590829849243" blue="0.83137261867523193" alpha="1" colorSpace="deviceRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <state key="normal" title="Following">
-                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <state key="normal" title="Follow">
+                                                        <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                                     </state>
                                                 </button>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="ERT-Iw-fPD">
-                                                    <rect key="frame" x="148" y="30" width="164" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -1563,7 +1567,7 @@
                             <tableViewSection headerTitle="Recent Post" id="viT-rf-7tW">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Rit-BK-rbR">
-                                        <rect key="frame" x="0.0" y="303.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="327.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rit-BK-rbR" id="7II-qX-bdL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -1571,7 +1575,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="G9r-kR-Tre">
-                                        <rect key="frame" x="0.0" y="347.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="371.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G9r-kR-Tre" id="bdA-em-U8f">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -1591,9 +1595,8 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="followButton" destination="oIb-Sb-h4A" id="DeX-C6-4hI"/>
-                        <outlet property="profileImageView" destination="Jjl-YW-6gx" id="wn3-5W-NUk"/>
-                        <outlet property="usernameTextField" destination="ERT-Iw-fPD" id="L2l-u6-hcm"/>
+                        <outlet property="profileImageView" destination="jH0-lu-Ifa" id="s9B-Je-zel"/>
+                        <outlet property="userDataCell" destination="Wdk-Bq-Pbz" id="4hd-8D-yD9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Whd-Xv-PsP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1610,7 +1613,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="6uJ-ER-RQO"/>
-        <segue reference="OVf-71-Yhk"/>
+        <segue reference="2Vo-Ff-LrD"/>
         <segue reference="PUi-nV-eQ5"/>
     </inferredMetricsTieBreakers>
 </document>

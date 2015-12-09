@@ -15,7 +15,9 @@ class ProfileViewController: UITableViewController,UITextFieldDelegate,UIImagePi
     @IBOutlet var FirstName: UITextField!
     @IBOutlet var email: UITextField!
     @IBOutlet var username: UITextField!
-
+    @IBOutlet var userDataCell: UITableViewCell!
+    @IBOutlet var firstnameCell: UITableViewCell!
+    @IBOutlet var lastnameCell: UITableViewCell!
     var currentUser: String!
     
     override func viewWillAppear(test: Bool){
@@ -25,6 +27,9 @@ class ProfileViewController: UITableViewController,UITextFieldDelegate,UIImagePi
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        userDataCell.selectionStyle = UITableViewCellSelectionStyle.None
+        firstnameCell.selectionStyle = UITableViewCellSelectionStyle.None
+        lastnameCell.selectionStyle = UITableViewCellSelectionStyle.None
         self.navigationItem.rightBarButtonItem = logOutButton
         currentUser = PFUser.currentUser()!.username
         if(currentUser == nil){

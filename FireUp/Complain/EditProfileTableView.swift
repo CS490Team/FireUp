@@ -11,6 +11,13 @@ class EditProfileTableView: UITableViewController,UITextFieldDelegate,UIImagePic
     var currentUserString: String!
     var currentUser: PFUser!
     
+    @IBOutlet var lastnameCell: UITableViewCell!
+    @IBOutlet var firstnameCell: UITableViewCell!
+    @IBOutlet var confirmPasswordCell: UITableViewCell!
+    @IBOutlet var passwordCell: UITableViewCell!
+    @IBOutlet var emailCell: UITableViewCell!
+    @IBOutlet var usernameCell: UITableViewCell!
+    @IBOutlet var userDataCell: UITableViewCell!
     @IBOutlet var user_profile_image: UIImageView!
     @IBOutlet var passwordTextField: UITextField!
     @IBOutlet var firstNameTextField: UITextField!
@@ -31,7 +38,13 @@ class EditProfileTableView: UITableViewController,UITextFieldDelegate,UIImagePic
         self.lastNameTextField.delegate = self
         self.emailTextField.delegate = self
         self.confirmPasswordTextField.delegate = self
-        
+        userDataCell.selectionStyle = UITableViewCellSelectionStyle.None
+        usernameCell.selectionStyle = UITableViewCellSelectionStyle.None
+        emailCell.selectionStyle = UITableViewCellSelectionStyle.None
+        passwordCell.selectionStyle = UITableViewCellSelectionStyle.None
+        confirmPasswordCell.selectionStyle = UITableViewCellSelectionStyle.None
+        firstnameCell.selectionStyle = UITableViewCellSelectionStyle.None
+        lastnameCell.selectionStyle = UITableViewCellSelectionStyle.None
         usernameTextField.enabled = false;
         emailTextField.enabled = false;
         currentUserString = PFUser.currentUser()!.username
