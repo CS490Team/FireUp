@@ -22,10 +22,10 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(TRUsername)
+        
+        
         usernameTextField.text = TRUsername
         let usernameQuery = PFQuery(className: "_User")
-        print(TRUsername)
         usernameQuery.whereKey("username", equalTo: TRUsername)
         targetUser = usernameQuery.getFirstObject() as! PFUser
         if(targetUser.objectForKey("User_Profile_Picture") != nil){
@@ -34,6 +34,10 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
                 self.profileImageView.image = UIImage(data: imageData!)
             }
         }
+        
+        
+        
+        
         userDataCell.selectionStyle = UITableViewCellSelectionStyle.None
         let followQuery = PFQuery(className: "FollowRelation")
         followQuery.whereKey("User", equalTo: PFUser.currentUser())
@@ -61,6 +65,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             if error == nil{
                 if results.count>0 {
                     self.unfollowUer()
+                    print("unfollowUer")
                 }else{
                     self.followUser()
                 }
