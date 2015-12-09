@@ -18,6 +18,8 @@ class MainPageTableViewCell: UITableViewCell {
     
     @IBOutlet var thumbnailImage: PFImageView! = PFImageView()
     
+    @IBOutlet weak var Location: UIButton!
+    @IBOutlet weak var LocationImage: UIButton!
     var Username:String!
     var Title:String!
     var Recipe:String!
