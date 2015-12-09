@@ -22,8 +22,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+
         usernameTextField.text = TRUsername
         let usernameQuery = PFQuery(className: "_User")
         usernameQuery.whereKey("username", equalTo: TRUsername)
@@ -72,6 +71,8 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             }
         }
         self.tableView.reloadData()
+        self.refreshControl?.endRefreshing()
+
     }
     
     func followUser(){
@@ -81,9 +82,20 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
         followRelation.saveInBackgroundWithBlock(nil)
     }
     func unfollowUer(){
-        let followRelation = PFObject(className: "FollowRelation")
-        followRelation["User"] = PFUser.currentUser()
-        followRelation["Target"] = targetUser
-        followRelation.deleteInBackgroundWithBlock(nil)
+        let followQuery = PFQuery(className: "FollowRelation")
+        followQuery.whereKey("User", equalTo: PFUser.currentUser())
+        followQuery.whereKey("Target", equalTo: targetUser)
+        followQuery.findObjectsInBackgroundWithBlock({ (results:[AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if results.count > 0{
+                    let followrelation = results as! [PFObject]
+                    for msg in followrelation{
+                        msg.deleteInBackgroundWithBlock(nil)
+                    }
+                }
+            }else{
+                print("unfollow Error")
+            }
+        })
     }
 }
