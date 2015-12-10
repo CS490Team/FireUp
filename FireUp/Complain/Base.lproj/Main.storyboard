@@ -415,7 +415,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <connections>
-                                                <segue destination="bCA-Cc-c05" kind="push" id="4Br-z7-hue"/>
+                                                <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView1" id="4Br-z7-hue"/>
                                             </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vp5-gB-I1U">
@@ -423,7 +423,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <connections>
-                                                <segue destination="bCA-Cc-c05" kind="push" id="bdh-8M-d2n"/>
+                                                <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView1" id="bdh-8M-d2n"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -473,6 +473,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Y1E-ET-kpZ"/>
+                    <connections>
+                        <outlet property="ViewMap" destination="rKa-eS-Nua" id="3yw-Yb-o0F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8T4-1z-Zau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
