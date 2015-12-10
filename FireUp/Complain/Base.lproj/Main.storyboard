@@ -349,50 +349,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View feeds with location only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="reg-yW-EGe">
-                                <rect key="frame" x="66" y="210" width="222" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View feeds with same city" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SWi-gQ-UOJ">
-                                <rect key="frame" x="66" y="250" width="178" height="21"/>
+                                <rect key="frame" x="55" y="250" width="178" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View feeds by distance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dOh-Am-uG3">
-                                <rect key="frame" x="66" y="289" width="177" height="21"/>
+                                <rect key="frame" x="55" y="289" width="177" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30 Mile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wqF-uy-rjO">
-                                <rect key="frame" x="97" y="326" width="51" height="21"/>
+                                <rect key="frame" x="86" y="326" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60 Mile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b0q-yA-6WF">
-                                <rect key="frame" x="97" y="355" width="51" height="21"/>
+                                <rect key="frame" x="86" y="355" width="51" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100 Mile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="aQ9-jV-ze1">
-                                <rect key="frame" x="97" y="384" width="58" height="21"/>
+                                <rect key="frame" x="86" y="384" width="58" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View all feeds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o5W-JN-2ME">
-                                <rect key="frame" x="66" y="168" width="106" height="21"/>
+                                <rect key="frame" x="55" y="168" width="106" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -407,37 +400,79 @@
                                 <rect key="frame" x="20" y="250" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="1" image="unckeck"/>
+                                <connections>
+                                    <action selector="sameCityF:" destination="iTN-39-yiE" eventType="touchUpInside" id="wbp-2N-gH5"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eAI-e6-IGX">
                                 <rect key="frame" x="20" y="289" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="1" image="unckeck"/>
+                                <connections>
+                                    <action selector="byDistanceF:" destination="iTN-39-yiE" eventType="touchUpInside" id="1j6-cI-NbW"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="AZq-90-aUN">
-                                <rect key="frame" x="66" y="327" width="20" height="20"/>
+                                <rect key="frame" x="55" y="327" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="1" image="unckeck"/>
+                                <connections>
+                                    <action selector="sanshiF:" destination="iTN-39-yiE" eventType="touchUpInside" id="atl-NS-u37"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6tx-Lj-YWC">
+                                <rect key="frame" x="55" y="355" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="1" image="unckeck"/>
+                                <connections>
+                                    <action selector="liushiF:" destination="iTN-39-yiE" eventType="touchUpInside" id="bVh-HW-Bcj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VZj-l7-ph3">
-                                <rect key="frame" x="66" y="385" width="20" height="20"/>
+                                <rect key="frame" x="55" y="385" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="1" image="unckeck"/>
+                                <connections>
+                                    <action selector="yibaiF:" destination="iTN-39-yiE" eventType="touchUpInside" id="KlM-sV-EA1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="QFl-Wa-OLr">
                                 <rect key="frame" x="20" y="211" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="1" image="unckeck"/>
+                                <connections>
+                                    <action selector="locationSharingF:" destination="iTN-39-yiE" eventType="touchUpInside" id="Kmb-h4-B36"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6tx-Lj-YWC">
-                                <rect key="frame" x="66" y="355" width="20" height="20"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ph4-SF-cVC">
+                                <rect key="frame" x="20" y="168" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="1" image="unckeck"/>
+                                <connections>
+                                    <action selector="allF:" destination="iTN-39-yiE" eventType="touchUpInside" id="axZ-HQ-DvQ"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="View feeds with location sharing only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="reg-yW-EGe">
+                                <rect key="frame" x="55" y="210" width="254" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="k2e-uR-daM"/>
                     <connections>
+                        <outlet property="all" destination="7b3-dZ-E7S" id="CdG-16-w6l"/>
+                        <outlet property="byDistance" destination="eAI-e6-IGX" id="Zeo-Er-vLE"/>
+                        <outlet property="liushi" destination="6tx-Lj-YWC" id="5fb-H9-Kpk"/>
+                        <outlet property="liushiL" destination="b0q-yA-6WF" id="Ffu-Hk-5Uv"/>
+                        <outlet property="locationSharing" destination="QFl-Wa-OLr" id="JKm-xl-HEr"/>
+                        <outlet property="sameCity" destination="Fih-sO-wlJ" id="wAW-84-ptl"/>
+                        <outlet property="sanshi" destination="AZq-90-aUN" id="CJk-tw-dsO"/>
+                        <outlet property="sanshiL" destination="wqF-uy-rjO" id="TFg-gm-Ron"/>
+                        <outlet property="yibai" destination="VZj-l7-ph3" id="l1O-Jc-JGy"/>
+                        <outlet property="yibanL" destination="aQ9-jV-ze1" id="r5e-W0-Cdu"/>
                         <segue destination="Ef3-th-74L" kind="push" identifier="toMain" id="vfh-rP-M4h"/>
                     </connections>
                 </viewController>
