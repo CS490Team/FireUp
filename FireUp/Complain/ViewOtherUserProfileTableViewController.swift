@@ -14,6 +14,8 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var followButton: UIButton!
     
+    @IBOutlet var totalPostTextfield: UITextField!
+    @IBOutlet var followerTextField: UITextField!
     @IBOutlet var userDataCell: UITableViewCell!
     var TRImage:UIImage!
     var TRUsername:String!
@@ -22,6 +24,8 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameTextField.enabled  = false
+        totalPostTextfield.enabled = false
+        followerTextField.enabled = false
         usernameTextField.text = TRUsername
         let usernameQuery = PFQuery(className: "_User")
         usernameQuery.whereKey("username", equalTo: TRUsername)
@@ -33,7 +37,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             }
         }
         
-        
+        loadCount()
         
         
         userDataCell.selectionStyle = UITableViewCellSelectionStyle.None
@@ -105,6 +109,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             if error == nil {
                 if results.count > 0{
                     print(results.count)
+                    self.followerTextField.text = "Follower: " 
                 }
             }else{
                 print("unfollow Error")
