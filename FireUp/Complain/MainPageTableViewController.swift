@@ -156,6 +156,12 @@ class MainPageTableViewController: PFQueryTableViewController{
             VC.TRImage = cell.TheImage.image
             VC.TRRecipe = self.objects[indexPath!.row].valueForKey("recipe")! as! String
         }
+        if(segue.identifier == "toMapView1"){
+            
+        }
+        if(segue.identifier == "toMapView2"){
+            
+        }
     }
     
     func setAttributes(forPhoto: PFObject){

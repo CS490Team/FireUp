@@ -423,7 +423,7 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <animations/>
                                             <connections>
-                                                <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView1" id="bdh-8M-d2n"/>
+                                                <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView2" id="bdh-8M-d2n"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -479,7 +479,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8T4-1z-Zau" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1322" y="483"/>
+            <point key="canvasLocation" x="1311" y="398"/>
         </scene>
         <!--View Recipe-->
         <scene sceneID="eq5-cD-vRq">
@@ -1571,9 +1571,9 @@
         <image name="check" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bdh-8M-d2n"/>
+        <segue reference="PUi-nV-eQ5"/>
         <segue reference="6uJ-ER-RQO"/>
         <segue reference="OVf-71-Yhk"/>
-        <segue reference="PUi-nV-eQ5"/>
+        <segue reference="bdh-8M-d2n"/>
     </inferredMetricsTieBreakers>
 </document>
