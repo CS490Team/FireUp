@@ -109,12 +109,26 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             if error == nil {
                 if results.count > 0{
                     print(results.count)
-                    self.followerTextField.text = "Follower: " 
+                    let tempString = String(results.count)
+                    self.followerTextField.text = "Follower: " + tempString
                 }
             }else{
                 print("unfollow Error")
             }
         })
-        
+        let postCountQuery = PFQuery(className: "feed")
+        postCountQuery.whereKey("feeder", equalTo: targetUser)
+        postCountQuery.findObjectsInBackgroundWithBlock({ (results:[AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if results.count > 0{
+                    print(results.count)
+                    let tempString = String(results.count)
+                    self.totalPostTextfield.text = "TotalPost: " + tempString
+                }
+            }else{
+                print("unfollow Error")
+            }
+        })
+
     }
 }

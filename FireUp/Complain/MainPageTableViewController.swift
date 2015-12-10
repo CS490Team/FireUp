@@ -288,6 +288,7 @@ class MainPageTableViewController: PFQueryTableViewController, CLLocationManager
             VC.UserImage = cell.TheImage.image
             VC.Username = cell.Username
         }
+        
     }
     
     /*override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
