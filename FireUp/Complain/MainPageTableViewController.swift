@@ -157,10 +157,16 @@ class MainPageTableViewController: PFQueryTableViewController{
             VC.TRRecipe = self.objects[indexPath!.row].valueForKey("recipe")! as! String
         }
         if(segue.identifier == "toMapView1"){
-            
+            let VC = segue.destinationViewController as! DisplayMapViewController
+            let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
+            VC.DisplayLocation = self.objects[indexPath!.row].valueForKey("location")! as! PFGeoPoint
         }
         if(segue.identifier == "toMapView2"){
-            
+            let VC = segue.destinationViewController as! DisplayMapViewController
+            let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
+            VC.DisplayLocation = self.objects[indexPath!.row].valueForKey("location")! as! PFGeoPoint
         }
     }
     
