@@ -9,6 +9,8 @@
 import UIKit
 
 class FilterDisplayViewController: UIViewController {
+    
+    var selectedFilter: Int = 0;
 
     override func viewDidLoad() {
         super.viewDidLoad()
