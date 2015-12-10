@@ -22,7 +22,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lrN-Lp-YP2">
-                                <rect key="frame" x="0.0" y="136" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lrN-Lp-YP2" id="kAu-ZZ-zpM">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -57,7 +57,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="90" id="iSG-Qf-YWL" customClass="OverviewTableViewCell" customModule="Complain" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="92" width="320" height="90"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="90"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iSG-Qf-YWL" id="u9v-Jc-IyQ">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
@@ -341,6 +341,24 @@
             </objects>
             <point key="canvasLocation" x="1329" y="-368"/>
         </scene>
+        <!--Filter Display View Controller-->
+        <scene sceneID="4f4-LF-Bgy">
+            <objects>
+                <viewController id="iTN-39-yiE" customClass="FilterDisplayViewController" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yiw-SV-1OI">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="k2e-uR-daM"/>
+                    <connections>
+                        <segue destination="Ef3-th-74L" kind="push" identifier="toMain" id="vfh-rP-M4h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kUZ-z6-S7O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304" y="455"/>
+        </scene>
         <!--Main Page Table View Controller-->
         <scene sceneID="uMZ-7H-Ihu">
             <objects>
@@ -451,6 +469,7 @@
                     <connections>
                         <segue destination="h74-Qs-ofT" kind="push" identifier="PostViewController" id="vOu-uQ-cqX"/>
                         <segue destination="Nhz-3R-PGx" kind="push" identifier="MainToLogin" id="OVf-71-Yhk"/>
+                        <segue destination="iTN-39-yiE" kind="push" identifier="toFilter" id="qjW-Mv-a9V"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rmL-Al-bSu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1600,9 +1619,9 @@
         <image name="check" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="PUi-nV-eQ5"/>
-        <segue reference="6uJ-ER-RQO"/>
+        <segue reference="vfh-rP-M4h"/>
         <segue reference="OVf-71-Yhk"/>
         <segue reference="bdh-8M-d2n"/>
+        <segue reference="PUi-nV-eQ5"/>
     </inferredMetricsTieBreakers>
 </document>

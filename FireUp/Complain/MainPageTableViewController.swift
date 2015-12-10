@@ -11,6 +11,7 @@ var cache = NSCache()
 class MainPageTableViewController: PFQueryTableViewController{
 
     var MainPageData = NSDictionary()
+    var filter = 0;
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -35,6 +36,7 @@ class MainPageTableViewController: PFQueryTableViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         addRightBarItem()
+        addLeftBarItem()
         self.navigationItem.hidesBackButton = true
         if(PFUser.currentUser() == nil){
             performSegueWithIdentifier("MainToLogin", sender: self)
@@ -49,6 +51,19 @@ class MainPageTableViewController: PFQueryTableViewController{
     func rightBarAction(){
         self.performSegueWithIdentifier("PostViewController", sender: self.navigationItem.rightBarButtonItem)
     }
+    
+    func addLeftBarItem(){
+        let leftBarItem = UIBarButtonItem()
+        leftBarItem.target = self
+        leftBarItem.action = "leftBarAction"
+        leftBarItem.title = "Filter"
+
+        self.navigationItem.leftBarButtonItem = leftBarItem
+    }
+    
+    func leftBarAction(){
+        self.performSegueWithIdentifier("toFilter", sender: self.navigationItem.rightBarButtonItem)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -59,7 +74,7 @@ class MainPageTableViewController: PFQueryTableViewController{
         cell.TheImage.frame = CGRectMake(0, 70, 320, 250)
         cell.TheImage.image = UIImage(named: "1421031790_Picture")
         //let photo: PFObject = self.objects[indexPath.row] as! PFObject
-        
+        print(filter)
         cell.TheText.text = self.objects[indexPath.row].valueForKey("text")! as! String
         cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         

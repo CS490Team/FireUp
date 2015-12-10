@@ -10,6 +10,7 @@
 		000CCAFA1C17D443001A0D43 /* ViewRecipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000CCAF91C17D443001A0D43 /* ViewRecipe.swift */; };
 		00858BD01BEC6D9E00205E6D /* ViewProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */; };
 		2A7E2BBF1C1903BD001FBCBB /* DisplayMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7E2BBE1C1903BD001FBCBB /* DisplayMapViewController.swift */; };
+		2AC5CA3D1C192719007CABE2 /* FilterDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC5CA3C1C192719007CABE2 /* FilterDisplayViewController.swift */; };
 		7E012D651BC1CC520011B4D1 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E012D641BC1CC520011B4D1 /* SignUp.swift */; };
 		7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE351BEC0FE500494B44 /* MessageViewController.swift */; };
 		7E31EE391BEC47BB00494B44 /* NSDate+Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E31EE381BEC47BB00494B44 /* NSDate+Utilities.m */; };
@@ -118,6 +119,7 @@
 		000CCAF91C17D443001A0D43 /* ViewRecipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewRecipe.swift; sourceTree = "<group>"; };
 		00858BCF1BEC6D9E00205E6D /* ViewProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewProfile.swift; sourceTree = "<group>"; };
 		2A7E2BBE1C1903BD001FBCBB /* DisplayMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayMapViewController.swift; sourceTree = "<group>"; };
+		2AC5CA3C1C192719007CABE2 /* FilterDisplayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterDisplayViewController.swift; sourceTree = "<group>"; };
 		7E012D641BC1CC520011B4D1 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		7E31EE351BEC0FE500494B44 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		7E31EE371BEC47BB00494B44 /* NSDate+Utilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Utilities.h"; sourceTree = "<group>"; };
@@ -504,6 +506,7 @@
 				7E4973EE1C167ED5003BB278 /* SignUpTableViewController.swift */,
 				E910DD1B1BC407E6006CA590 /* EditProfilePage.swift */,
 				B169EFFC1A62FAF600920072 /* Main.storyboard */,
+				2AC5CA3C1C192719007CABE2 /* FilterDisplayViewController.swift */,
 				2A7E2BBE1C1903BD001FBCBB /* DisplayMapViewController.swift */,
 				7EBB95A51C18BBB500D5A0F8 /* ViewOtherUserProfileTableViewController.swift */,
 				000CCAF91C17D443001A0D43 /* ViewRecipe.swift */,
@@ -754,6 +757,7 @@
 				7E85C03F1BEBA16A002D4437 /* OverviewTableViewCell.swift in Sources */,
 				7E31EE361BEC0FE500494B44 /* MessageViewController.swift in Sources */,
 				7EC7473B1BEAB436002DAA0B /* JSQMessagesBubbleImage.m in Sources */,
+				2AC5CA3D1C192719007CABE2 /* FilterDisplayViewController.swift in Sources */,
 				7EC747261BEAB436002DAA0B /* NSString+JSQMessages.m in Sources */,
 				7EC7472A1BEAB436002DAA0B /* UIView+JSQMessages.m in Sources */,
 				7EC747401BEAB436002DAA0B /* JSQMessagesCollectionViewCell.m in Sources */,
