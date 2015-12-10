@@ -22,7 +22,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lrN-Lp-YP2">
-                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lrN-Lp-YP2" id="kAu-ZZ-zpM">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -470,6 +470,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <animations/>
                             </mapView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HBa-OE-IsE">
+                                <rect key="frame" x="20" y="90" width="55" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gkv-mM-cQX">
+                                <rect key="frame" x="92" y="103" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -477,6 +486,8 @@
                     <navigationItem key="navigationItem" id="Y1E-ET-kpZ"/>
                     <connections>
                         <outlet property="ViewMap" destination="rKa-eS-Nua" id="3yw-Yb-o0F"/>
+                        <outlet property="theImage" destination="HBa-OE-IsE" id="1OD-GT-uY0"/>
+                        <outlet property="theName" destination="gkv-mM-cQX" id="qCJ-gN-5m3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8T4-1z-Zau" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -11,7 +11,11 @@ import MapKit
 
 class DisplayMapViewController: UIViewController, MKMapViewDelegate{
     
-    @IBOutlet var ViewMap: MKMapView!
+    @IBOutlet var ViewMap:MKMapView!
+    @IBOutlet var theImage:UIImageView!
+    @IBOutlet var theName:UIButton!
+    
+    
     var DisplayLocation: PFGeoPoint = PFGeoPoint()
     var UserImage:UIImage!
     var Username:String!
@@ -23,10 +27,20 @@ class DisplayMapViewController: UIViewController, MKMapViewDelegate{
         let pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(DisplayLocation.latitude,DisplayLocation.longitude)
         let objectAnnotation = MKPointAnnotation()
         objectAnnotation.coordinate = pinLocation
-        objectAnnotation.title = "Home"
+        objectAnnotation.title = Username + "'s home"
         self.ViewMap.addAnnotation(objectAnnotation)
-        print(UserImage)
-        print(Username)
+        
+        
+        theImage.image = UserImage
+        theImage.layer.masksToBounds = false
+        theImage.layer.borderColor = UIColor.whiteColor().CGColor
+        theImage.layer.cornerRadius = theImage.frame.size.width/2
+        theImage.clipsToBounds = true
+        
+        theName.setTitle(Username, forState: .Normal)
+        theName.enabled = false
+        theName.setTitleColor(UIColor.blackColor(), forState: .Normal)
+        
     }
     
     let regionRadius: CLLocationDistance = 5000
