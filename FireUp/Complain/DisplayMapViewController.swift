@@ -18,6 +18,12 @@ class DisplayMapViewController: UIViewController, MKMapViewDelegate{
         super.viewDidLoad()
         centerMapOnLocation(DisplayLocation)
         self.ViewMap.delegate = self
+        
+        var pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(DisplayLocation.latitude,DisplayLocation.longitude)
+        var objectAnnotation = MKPointAnnotation()
+        objectAnnotation.coordinate = pinLocation
+        objectAnnotation.title = "Home"
+        self.ViewMap.addAnnotation(objectAnnotation)
     }
     
     let regionRadius: CLLocationDistance = 5000
@@ -28,7 +34,4 @@ class DisplayMapViewController: UIViewController, MKMapViewDelegate{
             regionRadius * 2.0, regionRadius * 2.0)
         ViewMap.setRegion(coordinateRegion, animated: true)
     }
-    
-
-    
 }
