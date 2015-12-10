@@ -63,14 +63,10 @@ class MainPageTableViewController: PFQueryTableViewController{
         cell.TheText.text = self.objects[indexPath.row].valueForKey("text")! as! String
         cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         
-        print(cell.TheImage.file)
-        
        // let UserID = self.objects[indexPath.row].valueForKey("feeder")
         let CUser = self.objects[indexPath.row].valueForKey("feeder") as! PFUser
         //let TQuery = PFUser.query()
         //TQuery.whereKey("objectId", equalTo: self.objects[indexPath.row].valueForKey("feeder"))
-        //let TUser:PFUser = TQuery.whereKey(<#T##key: String!##String!#>, equalTo: <#T##AnyObject!#>)
-        print(CUser)
         let username:String = CUser.username as String
         cell.UserName.setTitle(username, forState: .Normal)
         cell.UserName.setTitleColor(UIColor.blackColor(), forState: .Normal)
@@ -114,6 +110,10 @@ class MainPageTableViewController: PFQueryTableViewController{
                 cell.LocationImage.setImage(UIImage(named: "map_icon"), forState: .Normal)
                 
             })
+        
+        }else{
+            cell.Location.enabled = false
+            cell.LocationImage.enabled = true
         }
 
         
@@ -124,6 +124,11 @@ class MainPageTableViewController: PFQueryTableViewController{
         return cell
     }
     
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        //let share = self.objects[indexPath.row].valueForKey("locationShare")! as! Bool
+
+        return 373
+    }
     
     /*
     var DestViewController : ViewProfile = segue.destinationViewController as! ViewProfile
@@ -175,6 +180,18 @@ class MainPageTableViewController: PFQueryTableViewController{
             VC.Username = cell.Username
         }
     }
+    
+    /*override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
+        if(identifier == "toMapView1" || identifier == "toMapView2"){
+            let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
+            let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
+            let share = self.objects[indexPath!.row].valueForKey("locationShare")! as! Bool
+            if(!share){
+                return false
+            }
+        }
+        return true
+    }*/
     
     func setAttributes(forPhoto: PFObject){
         let attributes = NSMutableDictionary()
