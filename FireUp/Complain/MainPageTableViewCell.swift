@@ -23,5 +23,12 @@ class MainPageTableViewCell: UITableViewCell {
     var Username:String!
     var Title:String!
     var Recipe:String!
+    var feedCity:String!
+    var feedState:String!
+    var share:Bool = false
     
+    func reset(){
+        Location.hidden = true
+        LocationImage.hidden = true
+    }
 }

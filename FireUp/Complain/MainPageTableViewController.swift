@@ -8,10 +8,12 @@ import UIKit
 
 var cache = NSCache()
 
-class MainPageTableViewController: PFQueryTableViewController{
+class MainPageTableViewController: PFQueryTableViewController, CLLocationManagerDelegate{
 
     var MainPageData = NSDictionary()
     var filter = 0;
+    let locationManager = CLLocationManager()
+    var currentUserLocation = CLLocation()
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -29,9 +31,6 @@ class MainPageTableViewController: PFQueryTableViewController{
         return queryForUser
     }
     
-    func loadData(){
-        
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +40,17 @@ class MainPageTableViewController: PFQueryTableViewController{
         if(PFUser.currentUser() == nil){
             performSegueWithIdentifier("MainToLogin", sender: self)
         }
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestAlwaysAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let userLocation:CLLocation = locations[0]
+        let long = userLocation.coordinate.longitude;
+        let lat = userLocation.coordinate.latitude;
+        currentUserLocation = CLLocation(latitude: lat, longitude: long)
     }
     
     func addRightBarItem(){
@@ -74,7 +84,7 @@ class MainPageTableViewController: PFQueryTableViewController{
         cell.TheImage.frame = CGRectMake(0, 70, 320, 250)
         cell.TheImage.image = UIImage(named: "1421031790_Picture")
         //let photo: PFObject = self.objects[indexPath.row] as! PFObject
-        print(filter)
+
         cell.TheText.text = self.objects[indexPath.row].valueForKey("text")! as! String
         cell.TheImage.file = self.objects[indexPath.row].valueForKey("image")! as! PFFile
         
@@ -104,6 +114,7 @@ class MainPageTableViewController: PFQueryTableViewController{
         })
         
         let share = self.objects[indexPath.row].valueForKey("locationShare")! as! Bool
+        cell.share = share
         if(share){
             let descLocation: PFGeoPoint = self.objects[indexPath.row].valueForKey("location")! as! PFGeoPoint
             let geoCoder = CLGeocoder()
@@ -121,14 +132,18 @@ class MainPageTableViewController: PFQueryTableViewController{
                 let city = placeMark.addressDictionary!["City"] as? String
                 let state = placeMark.addressDictionary!["State"] as? String
                 let locationInfo:String = city! + ", " + state!
+                cell.Location.hidden = false
+                cell.Location.hidden = false
                 cell.Location.setTitle(locationInfo, forState: .Normal)
-                cell.LocationImage.setImage(UIImage(named: "map_icon"), forState: .Normal)
+                cell.LocationImage.setImage(UIImage(named: "map_blue"), forState: .Normal)
+                cell.Location.setTitleColor(UIColor.blackColor(), forState: .Normal)
                 
             })
         
         }else{
-            cell.Location.enabled = false
-            cell.LocationImage.enabled = true
+            cell.LocationImage.setImage(nil, forState: .Normal)
+            cell.Location.hidden = true
+            cell.Location.hidden = true
         }
 
         
@@ -139,8 +154,87 @@ class MainPageTableViewController: PFQueryTableViewController{
         return cell
     }
     
+    /*override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MainPageCell", forIndexPath: indexPath) as! MainPageTableViewCell
+        cell.reset()
+    }*/
+    
+    /*override func tableView(tableView: UITableView, didEndDisplayingCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.dequeueReusableCellWithIdentifier("MainPageCell", forIndexPath: indexPath) as! MainPageTableViewCell
+        if(!cell.share){
+            cell.reset()
+        }
+    }*/
+    
+
+    
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        //let share = self.objects[indexPath.row].valueForKey("locationShare")! as! Bool
+        
+        let share = self.objects[indexPath.row].valueForKey("locationShare")! as! Bool
+        /*
+        var feedCity:String?
+        var feedState:String?
+        
+        if(share){
+        
+            let feedLocation:PFGeoPoint = self.objects[indexPath.row].valueForKey("location")! as! PFGeoPoint
+            let geoCoderT = CLGeocoder()
+
+            let feedlocationCL = CLLocation(latitude: feedLocation.latitude, longitude: feedLocation.longitude)
+
+            print("0")
+            geoCoderT.reverseGeocodeLocation(feedlocationCL, completionHandler: { (placemarks, error) -> Void in
+                let placeArray = placemarks! as [CLPlacemark]
+                // Place details
+                var placeMark: CLPlacemark!
+                placeMark = placeArray[0]
+                // Address dictionary
+                feedCity = placeMark.addressDictionary!["City"] as? String
+                feedState = placeMark.addressDictionary!["State"] as? String
+                
+            })
+        }
+        
+        var currentUserCity:String?
+        var currentUserState:String?
+        
+        let geoCoderCurrentUser = CLGeocoder()
+        geoCoderCurrentUser.reverseGeocodeLocation(currentUserLocation, completionHandler: { (placemarks, error) -> Void in
+            let placeArray = placemarks! as [CLPlacemark]
+            
+            // Place details
+            var placeMark: CLPlacemark!
+            placeMark = placeArray[0]
+            
+            // Address dictionary
+            
+            currentUserCity = placeMark.addressDictionary!["City"] as? String
+            currentUserState = placeMark.addressDictionary!["State"] as? String
+
+            
+        })*/
+        
+
+        if(filter == 1){
+            return 373
+        }else if(filter == 2){
+            if(!share){
+                return 0
+            }
+        }else if(filter == 3){
+            /*if(currentUserCity == feedCity && currentUserState == feedState && share){
+                return 373
+            }else{
+                return 0
+            }*/
+            
+        }else if(filter == 5){
+            
+        }else if(filter == 6){
+            
+        }else if(filter == 7){
+            
+        }
 
         return 373
     }
