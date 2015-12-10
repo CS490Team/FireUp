@@ -13,17 +13,20 @@ class DisplayMapViewController: UIViewController, MKMapViewDelegate{
     
     @IBOutlet var ViewMap: MKMapView!
     var DisplayLocation: PFGeoPoint = PFGeoPoint()
+    var UserImage:UIImage!
+    var Username:String!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         centerMapOnLocation(DisplayLocation)
         self.ViewMap.delegate = self
-        
-        var pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(DisplayLocation.latitude,DisplayLocation.longitude)
-        var objectAnnotation = MKPointAnnotation()
+        let pinLocation : CLLocationCoordinate2D = CLLocationCoordinate2DMake(DisplayLocation.latitude,DisplayLocation.longitude)
+        let objectAnnotation = MKPointAnnotation()
         objectAnnotation.coordinate = pinLocation
         objectAnnotation.title = "Home"
         self.ViewMap.addAnnotation(objectAnnotation)
+        print(UserImage)
+        print(Username)
     }
     
     let regionRadius: CLLocationDistance = 5000

@@ -161,12 +161,18 @@ class MainPageTableViewController: PFQueryTableViewController{
             let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
             let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
             VC.DisplayLocation = self.objects[indexPath!.row].valueForKey("location")! as! PFGeoPoint
+            let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
+            VC.UserImage = cell.TheImage.image
+            VC.Username = cell.Username
         }
         if(segue.identifier == "toMapView2"){
             let VC = segue.destinationViewController as! DisplayMapViewController
             let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
             let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
             VC.DisplayLocation = self.objects[indexPath!.row].valueForKey("location")! as! PFGeoPoint
+            let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell
+            VC.UserImage = cell.TheImage.image
+            VC.Username = cell.Username
         }
     }
     
