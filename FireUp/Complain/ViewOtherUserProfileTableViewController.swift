@@ -63,7 +63,6 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             if error == nil{
                 if results.count>0 {
                     self.unfollowUer()
-                    NSThread.sleepForTimeInterval(3)
                     self.viewDidLoad()
                 }else{
                     self.followUser()
@@ -89,8 +88,9 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
                 if results.count > 0{
                     let followrelation = results as! [PFObject]
                     for msg in followrelation{
-                        msg.deleteInBackgroundWithBlock(nil)
+                        msg.deleteEventually()
                     }
+                    self.viewDidLoad()
                 }
             }else{
                 print("unfollow Error")
