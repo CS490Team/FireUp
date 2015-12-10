@@ -21,7 +21,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        usernameTextField.enabled  = false
         usernameTextField.text = TRUsername
         let usernameQuery = PFQuery(className: "_User")
         usernameQuery.whereKey("username", equalTo: TRUsername)
@@ -96,5 +96,20 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
                 print("unfollow Error")
             }
         })
+    }
+    
+    func loadCount(){
+        let followCountQuery = PFQuery(className: "FollowRelation")
+        followCountQuery.whereKey("Target", equalTo: targetUser)
+        followCountQuery.findObjectsInBackgroundWithBlock({ (results:[AnyObject]!, error: NSError!) -> Void in
+            if error == nil {
+                if results.count > 0{
+                    print(results.count)
+                }
+            }else{
+                print("unfollow Error")
+            }
+        })
+        
     }
 }
