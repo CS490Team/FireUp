@@ -262,7 +262,7 @@ class MainPageTableViewController: PFQueryTableViewController, CLLocationManager
             VC.TRUsername = cell.Username
         }
         if(segue.identifier == "toRecipe"){
-            let VC = segue.destinationViewController as! ViewRecipe
+            let VC = segue.destinationViewController as! ViewRecipeTableViewController
             let SenderPosition = sender?.convertPoint(CGPointZero, toView: self.tableView)
             let indexPath = self.tableView.indexPathForRowAtPoint(SenderPosition!)
             let cell = self.tableView.cellForRowAtIndexPath(indexPath!) as! MainPageTableViewCell

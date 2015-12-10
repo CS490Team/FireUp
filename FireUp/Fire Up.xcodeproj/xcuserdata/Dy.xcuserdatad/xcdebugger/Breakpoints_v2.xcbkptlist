@@ -51,5 +51,83 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Complain/ViewOtherUserProfileTableViewController.swift"
+            timestampString = "471475353.055906"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
+            landmarkName = "ViewOtherUserProfileTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Complain.ViewOtherUserProfileTableViewController.__deallocating_deinit"
+                  moduleName = "Complain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dy/FireUp/FireUp/Complain/ViewOtherUserProfileTableViewController.swift"
+                  timestampString = "471475353.27899"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Complain.ViewOtherUserProfileTableViewController.init (Complain.ViewOtherUserProfileTableViewController.Type)(style : __C.UITableViewStyle) -&gt; Complain.ViewOtherUserProfileTableViewController"
+                  moduleName = "Complain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dy/FireUp/FireUp/Complain/ViewOtherUserProfileTableViewController.swift"
+                  timestampString = "471475353.304372"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Complain.ViewOtherUserProfileTableViewController.init (Complain.ViewOtherUserProfileTableViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.NSBundle&gt;) -&gt; Complain.ViewOtherUserProfileTableViewController"
+                  moduleName = "Complain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dy/FireUp/FireUp/Complain/ViewOtherUserProfileTableViewController.swift"
+                  timestampString = "471475353.30474"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "60">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Complain.ViewOtherUserProfileTableViewController.init (Complain.ViewOtherUserProfileTableViewController.Type)(coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;Complain.ViewOtherUserProfileTableViewController&gt;"
+                  moduleName = "Complain"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/Dy/FireUp/FireUp/Complain/ViewOtherUserProfileTableViewController.swift"
+                  timestampString = "471475353.305006"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
