@@ -144,11 +144,13 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
             let VC = segue.destinationViewController as! ViewRecipeTableViewController
             VC.TRTitle = recentPostCell2Title.text
             VC.TRRecipe = recentPostCell2Detail.text
+            VC.TRImage = TRImage
         }
         if(segue.identifier == "toDetail3"){
             let VC = segue.destinationViewController as! ViewRecipeTableViewController
             VC.TRTitle = recentPostCell3Title.text
             VC.TRRecipe = recentPostCell3Detail.text
+            VC.TRImage = TRImage
         }
     }
     

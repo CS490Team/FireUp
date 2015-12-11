@@ -20,7 +20,7 @@
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="lrN-Lp-YP2">
-                                <rect key="frame" x="0.0" y="72" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="136" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lrN-Lp-YP2" id="kAu-ZZ-zpM">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -823,11 +823,11 @@
             </objects>
             <point key="canvasLocation" x="1871" y="1968"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="gug-FD-AIi">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZF7-P4-VGC" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="d6E-ZC-BHc"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home-7" id="d6E-ZC-BHc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="g4b-H2-0FA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -935,7 +935,7 @@
         <scene sceneID="bTV-NP-oQ1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="KIB-4X-BbS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="profile" id="uEv-9w-STI"/>
+                    <tabBarItem key="tabBarItem" title="profile" image="shirt-7" id="uEv-9w-STI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bhg-z3-XFS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -954,7 +954,7 @@
         <scene sceneID="kQ6-bU-JPO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lb5-7P-9Dx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="chat" id="D8e-86-qIy"/>
+                    <tabBarItem key="tabBarItem" title="chat" image="message-7" id="D8e-86-qIy"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ibh-qA-nzC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1160,7 +1160,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="298" id="6nP-31-2X8" customClass="SweetTableViewCell" customModule="Complain" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="298"/>
+                                <rect key="frame" x="0.0" y="92" width="320" height="298"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6nP-31-2X8" id="Ksx-uk-DXt">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="297"/>
@@ -1816,11 +1816,11 @@
             </objects>
             <point key="canvasLocation" x="1386" y="1211"/>
         </scene>
-        <!--Item-->
+        <!--Message-->
         <scene sceneID="hh2-Z0-TQr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Dn-E7-Ytl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2dv-Mf-LrP"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="text-align-center-7" id="2dv-Mf-LrP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Aa-o5-ypU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1842,13 +1842,17 @@
         <image name="Login" width="375" height="667"/>
         <image name="SignUpNew-1" width="375" height="667"/>
         <image name="check" width="32" height="32"/>
+        <image name="home-7" width="30" height="30"/>
+        <image name="message-7" width="30" height="30"/>
+        <image name="shirt-7" width="30" height="30"/>
+        <image name="text-align-center-7" width="30" height="30"/>
         <image name="unckeck" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="bdh-8M-d2n"/>
-        <segue reference="6uJ-ER-RQO"/>
+        <segue reference="3Cg-da-AzQ"/>
+        <segue reference="bqi-az-iR0"/>
         <segue reference="OVf-71-Yhk"/>
         <segue reference="QbM-ZK-VDX"/>
-        <segue reference="bqi-az-iR0"/>
     </inferredMetricsTieBreakers>
 </document>
