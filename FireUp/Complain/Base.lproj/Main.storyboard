@@ -451,28 +451,18 @@
         <scene sceneID="uMZ-7H-Ihu">
             <objects>
                 <tableViewController id="Ef3-th-74L" customClass="MainPageTableViewController" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="373" sectionHeaderHeight="22" sectionFooterHeight="22" id="P12-n5-AN1">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="403" sectionHeaderHeight="22" sectionFooterHeight="22" id="P12-n5-AN1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainPageCell" rowHeight="373" id="7wu-xq-El2" customClass="MainPageTableViewCell" customModule="Complain" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="22" width="320" height="373"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainPageCell" rowHeight="403" id="7wu-xq-El2" customClass="MainPageTableViewCell" customModule="Complain" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="320" height="403"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7wu-xq-El2" id="Qtj-5O-JrR">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="372"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="402"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LZa-OV-kRL">
-                                            <rect key="frame" x="244" y="334" width="68" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Comment">
-                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <segue destination="z5r-4a-6qi" kind="push" identifier="toComment" id="7em-a4-QGT"/>
-                                            </connections>
-                                        </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5cG-yX-hwD">
                                             <rect key="frame" x="116" y="8" width="58" height="58"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -488,12 +478,8 @@
                                             <rect key="frame" x="8" y="8" width="58" height="58"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
-                                            <rect key="frame" x="8" y="74" width="2232" height="2103"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Ws-eh-3c3">
-                                            <rect key="frame" x="13" y="334" width="73" height="30"/>
+                                            <rect key="frame" x="14" y="364" width="73" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="See recipe"/>
                                             <connections>
@@ -515,6 +501,16 @@
                                                 <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView1" id="4Br-z7-hue"/>
                                             </connections>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LZa-OV-kRL">
+                                            <rect key="frame" x="244" y="364" width="68" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Comment">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="z5r-4a-6qi" kind="push" identifier="toComment" id="7em-a4-QGT"/>
+                                            </connections>
+                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vp5-gB-I1U">
                                             <rect key="frame" x="181" y="21" width="131" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -522,6 +518,10 @@
                                                 <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView2" id="bdh-8M-d2n"/>
                                             </connections>
                                         </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
+                                            <rect key="frame" x="8" y="74" width="2232" height="2103"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
@@ -1845,10 +1845,10 @@
         <image name="unckeck" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="bqi-az-iR0"/>
-        <segue reference="6uJ-ER-RQO"/>
         <segue reference="bdh-8M-d2n"/>
+        <segue reference="6uJ-ER-RQO"/>
         <segue reference="OVf-71-Yhk"/>
-        <segue reference="A6D-u9-AXv"/>
+        <segue reference="QbM-ZK-VDX"/>
+        <segue reference="bqi-az-iR0"/>
     </inferredMetricsTieBreakers>
 </document>

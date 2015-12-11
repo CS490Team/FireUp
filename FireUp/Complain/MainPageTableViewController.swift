@@ -216,7 +216,7 @@ class MainPageTableViewController: PFQueryTableViewController, CLLocationManager
         
 
         if(filter == 1){
-            return 373
+            return 402
         }else if(filter == 2){
             if(!share){
                 return 0
@@ -236,7 +236,7 @@ class MainPageTableViewController: PFQueryTableViewController, CLLocationManager
             
         }
 
-        return 373
+        return 402
     }
     
     /*
