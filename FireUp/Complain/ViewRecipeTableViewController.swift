@@ -30,8 +30,6 @@ class ViewRecipeTableViewController: UITableViewController {
         recipetitle.text = TRTitle
         image.image = TRImage
         recipe.text = TRRecipe
-        
-        image.image = TRImage
         image.layer.borderWidth = 1.0
         image.layer.masksToBounds = false
         image.layer.borderColor = UIColor.whiteColor().CGColor

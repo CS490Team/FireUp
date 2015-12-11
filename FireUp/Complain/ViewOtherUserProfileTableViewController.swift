@@ -28,7 +28,10 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     var TRImage:UIImage!
     var TRUsername:String!
     var targetUser:PFUser!
-    
+    var objectID1: String!
+    var objectID2: String!
+    var objectID3: String!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         usernameTextField.enabled  = false
@@ -74,7 +77,7 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
         
         let feedQuery = PFQuery(className: "feed")
         feedQuery.whereKey("feeder", equalTo: targetUser)
-        feedQuery.orderByAscending("createdAt")
+        feedQuery.orderByDescending("createdAt")
         feedQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
             if error == nil{
                 if results.count > 0{
@@ -88,17 +91,22 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
                             detailString = rp["recipe"] as! String
                             self.recentPostCell1Title.text = titleString
                             self.recentPostCell1Detail.text = detailString
+                            self.objectID1 = rp.objectId
+                            
                         }else if index == 2{
                             titleString = rp["text"] as! String
                             detailString = rp["recipe"] as! String
                             self.recentPostCell2Title.text = titleString
                             self.recentPostCell2Detail.text = detailString
-                            print(titleString)
+                            self.objectID2 = rp.objectId
+                            
                         }else if index == 3{
                             titleString = rp["text"] as! String
                             detailString = rp["recipe"] as! String
                             self.recentPostCell3Title.text = titleString
                             self.recentPostCell3Detail.text = detailString
+                            self.objectID3 = rp.objectId
+
                         }else{
                             break;
                         }
@@ -111,7 +119,37 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     }
     
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let imageQuery = PFQuery(className: "feed")
+        if(segue.identifier == "toDetail1"){
+            let VC = segue.destinationViewController as! ViewRecipeTableViewController
+            VC.TRTitle = recentPostCell1Title.text
+            VC.TRRecipe = recentPostCell1Detail.text
+            imageQuery.whereKey("objectId", equalTo: objectID1)
+            imageQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
+                let imagefile = results as! [PFObject]
+                for im in imagefile{
+                    let imfile = im.valueForKey("image") as! PFFile
+                    imfile.getDataInBackgroundWithBlock{ (data:NSData!, self_error:NSError!) -> Void in
+                        VC.TRImage = UIImage(data: data)
+                        if VC.TRImage == nil{
+                            print("")
+                        }
+                    }
+                }
+            }
+        }
+        if(segue.identifier == "toDetail2"){
+            let VC = segue.destinationViewController as! ViewRecipeTableViewController
+            VC.TRTitle = recentPostCell2Title.text
+            VC.TRRecipe = recentPostCell2Detail.text
+        }
+        if(segue.identifier == "toDetail3"){
+            let VC = segue.destinationViewController as! ViewRecipeTableViewController
+            VC.TRTitle = recentPostCell3Title.text
+            VC.TRRecipe = recentPostCell3Detail.text
+        }
+    }
     
     
     

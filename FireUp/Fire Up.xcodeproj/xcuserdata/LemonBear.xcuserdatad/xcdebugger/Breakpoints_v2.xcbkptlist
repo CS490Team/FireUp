@@ -502,13 +502,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Complain/ViewOtherUserProfileTableViewController.swift"
-            timestampString = "471495840.975675"
+            timestampString = "471506664.254397"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "ViewOtherUserProfileTableViewController"
-            landmarkType = "3">
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "followUser()"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
