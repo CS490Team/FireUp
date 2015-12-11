@@ -107,6 +107,10 @@ class PostViewController: UIViewController, UIActionSheetDelegate, UIImagePicker
             return true
         }
     }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+         self.view.endEditing(true)
+    }
 
     func rightBarButtonAction(){
         let post = PFObject(className: "feed")
