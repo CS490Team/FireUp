@@ -131,13 +131,14 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
                 for im in imagefile{
                     let imfile = im.valueForKey("image") as! PFFile
                     imfile.getDataInBackgroundWithBlock{ (data:NSData!, self_error:NSError!) -> Void in
-                        VC.TRImage = UIImage(data: data)
+                        //VC.TRImage = UIImage(data: data)
                         if VC.TRImage == nil{
                             print("")
                         }
                     }
                 }
             }
+            VC.TRImage = TRImage
         }
         if(segue.identifier == "toDetail2"){
             let VC = segue.destinationViewController as! ViewRecipeTableViewController

@@ -934,7 +934,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Complain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FireUp;
 				PRODUCT_NAME = Complain;
@@ -957,7 +957,7 @@
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = Complain/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = FireUp;
 				PRODUCT_NAME = Complain;
