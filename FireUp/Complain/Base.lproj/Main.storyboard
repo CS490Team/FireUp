@@ -451,6 +451,95 @@
         <scene sceneID="uMZ-7H-Ihu">
             <objects>
                 <tableViewController id="Ef3-th-74L" customClass="MainPageTableViewController" customModule="Complain" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="373" sectionHeaderHeight="22" sectionFooterHeight="22" id="P12-n5-AN1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainPageCell" rowHeight="373" id="7wu-xq-El2" customClass="MainPageTableViewCell" customModule="Complain" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="22" width="320" height="373"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7wu-xq-El2" id="Qtj-5O-JrR">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="373"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LZa-OV-kRL">
+                                            <rect key="frame" x="244" y="334" width="68" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Comment">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <segue destination="z5r-4a-6qi" kind="push" identifier="toComment" id="7em-a4-QGT"/>
+                                            </connections>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5cG-yX-hwD">
+                                            <rect key="frame" x="116" y="8" width="58" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="Wug-xF-8i8">
+                                            <rect key="frame" x="8" y="316" width="240" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1421031790_Picture" id="7IK-0n-0XO" customClass="PFImageView">
+                                            <rect key="frame" x="8" y="8" width="58" height="58"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
+                                            <rect key="frame" x="8" y="74" width="2232" height="2103"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Ws-eh-3c3">
+                                            <rect key="frame" x="13" y="334" width="73" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="See recipe"/>
+                                            <connections>
+                                                <segue destination="h4B-aB-dfJ" kind="push" identifier="toRecipe" id="QbM-ZK-VDX"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="azG-TF-gyE">
+                                            <rect key="frame" x="81" y="22" width="146" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="1"/>
+                                            <connections>
+                                                <segue destination="69Q-Ew-0WN" kind="push" identifier="toProfile" id="J5z-nT-BlM"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4bZ-Nr-jZu">
+                                            <rect key="frame" x="146" y="21" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView1" id="4Br-z7-hue"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vp5-gB-I1U">
+                                            <rect key="frame" x="181" y="21" width="131" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <connections>
+                                                <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView2" id="bdh-8M-d2n"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="Location" destination="Vp5-gB-I1U" id="ag5-f6-Qph"/>
+                                    <outlet property="LocationImage" destination="4bZ-Nr-jZu" id="Xrj-GR-C5j"/>
+                                    <outlet property="TheImage" destination="VYJ-1r-zJO" id="z6b-W7-mMU"/>
+                                    <outlet property="TheText" destination="Wug-xF-8i8" id="57J-QO-TX0"/>
+                                    <outlet property="UserImage" destination="5cG-yX-hwD" id="fGw-Z8-WA2"/>
+                                    <outlet property="UserName" destination="azG-TF-gyE" id="dcJ-Nz-KvD"/>
+                                    <outlet property="thumbnailImage" destination="7IK-0n-0XO" id="uWg-md-h97"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Ef3-th-74L" id="a3D-fo-jwu"/>
+                            <outlet property="delegate" destination="Ef3-th-74L" id="nie-BJ-4hG"/>
+                        </connections>
+                    </tableView>
                     <navigationItem key="navigationItem" id="gKk-GR-nDw"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -543,95 +632,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DeX-iL-rND" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="373" sectionHeaderHeight="22" sectionFooterHeight="22" id="P12-n5-AN1">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <prototypes>
-                        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainPageCell" rowHeight="373" id="7wu-xq-El2" customClass="MainPageTableViewCell" customModule="Complain" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="22" width="320" height="373"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7wu-xq-El2" id="Qtj-5O-JrR">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="373"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LZa-OV-kRL">
-                                        <rect key="frame" x="244" y="334" width="68" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Comment">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <segue destination="z5r-4a-6qi" kind="push" identifier="toComment" id="7em-a4-QGT"/>
-                                        </connections>
-                                    </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="5cG-yX-hwD">
-                                        <rect key="frame" x="116" y="8" width="58" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="Wug-xF-8i8">
-                                        <rect key="frame" x="8" y="316" width="240" height="28"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="1421031790_Picture" id="7IK-0n-0XO" customClass="PFImageView">
-                                        <rect key="frame" x="8" y="8" width="58" height="58"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VYJ-1r-zJO" customClass="PFImageView">
-                                        <rect key="frame" x="8" y="74" width="2232" height="2103"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="7Ws-eh-3c3">
-                                        <rect key="frame" x="13" y="334" width="73" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="See recipe"/>
-                                        <connections>
-                                            <segue destination="h4B-aB-dfJ" kind="push" identifier="toRecipe" id="QbM-ZK-VDX"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="azG-TF-gyE">
-                                        <rect key="frame" x="81" y="22" width="146" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="1"/>
-                                        <connections>
-                                            <segue destination="69Q-Ew-0WN" kind="push" identifier="toProfile" id="J5z-nT-BlM"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="4bZ-Nr-jZu">
-                                        <rect key="frame" x="146" y="21" width="30" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView1" id="4Br-z7-hue"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Vp5-gB-I1U">
-                                        <rect key="frame" x="181" y="21" width="131" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <connections>
-                                            <segue destination="bCA-Cc-c05" kind="push" identifier="toMapView2" id="bdh-8M-d2n"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </tableViewCellContentView>
-                            <connections>
-                                <outlet property="Location" destination="Vp5-gB-I1U" id="ag5-f6-Qph"/>
-                                <outlet property="LocationImage" destination="4bZ-Nr-jZu" id="Xrj-GR-C5j"/>
-                                <outlet property="TheImage" destination="VYJ-1r-zJO" id="z6b-W7-mMU"/>
-                                <outlet property="TheText" destination="Wug-xF-8i8" id="57J-QO-TX0"/>
-                                <outlet property="UserImage" destination="5cG-yX-hwD" id="fGw-Z8-WA2"/>
-                                <outlet property="UserName" destination="azG-TF-gyE" id="dcJ-Nz-KvD"/>
-                                <outlet property="thumbnailImage" destination="7IK-0n-0XO" id="uWg-md-h97"/>
-                            </connections>
-                        </tableViewCell>
-                    </prototypes>
-                    <connections>
-                        <outlet property="dataSource" destination="Ef3-th-74L" id="a3D-fo-jwu"/>
-                        <outlet property="delegate" destination="Ef3-th-74L" id="nie-BJ-4hG"/>
-                    </connections>
-                </tableView>
             </objects>
             <point key="canvasLocation" x="2016" y="1329"/>
         </scene>
@@ -1267,7 +1267,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="shX-rF-zJb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-57" y="1107"/>
+            <point key="canvasLocation" x="-158" y="1465"/>
         </scene>
         <!--Sign Up Table View Controller-->
         <scene sceneID="1qN-6G-D26">
@@ -1530,18 +1530,26 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="Recent Post" id="viT-rf-7tW">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Rit-BK-rbR">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="G9r-kR-Tre">
                                         <rect key="frame" x="0.0" y="327.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rit-BK-rbR" id="7II-qX-bdL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G9r-kR-Tre" id="bdA-em-U8f">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Recent Post" textAlignment="natural" minimumFontSize="17" id="chA-7u-z1d">
+                                                    <rect key="frame" x="8" y="7" width="304" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="G9r-kR-Tre">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="Rit-BK-rbR">
                                         <rect key="frame" x="0.0" y="371.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G9r-kR-Tre" id="bdA-em-U8f">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rit-BK-rbR" id="7II-qX-bdL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
@@ -1664,8 +1672,8 @@
         <image name="unckeck" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2Vo-Ff-LrD"/>
-        <segue reference="PUi-nV-eQ5"/>
+        <segue reference="bqi-az-iR0"/>
+        <segue reference="OVf-71-Yhk"/>
         <segue reference="6uJ-ER-RQO"/>
         <segue reference="bdh-8M-d2n"/>
     </inferredMetricsTieBreakers>
