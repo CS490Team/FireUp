@@ -75,22 +75,46 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
         let feedQuery = PFQuery(className: "feed")
         feedQuery.whereKey("feeder", equalTo: targetUser)
         feedQuery.orderByAscending("createdAt")
-        feedQuery.includeKey("recipe")
         feedQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
             if error == nil{
                 if results.count > 0{
-                        
-                        print(results)
-                
+                    let recentPost = results as! [PFObject]
+                    var index = 1
+                    var titleString = ""
+                    var detailString = ""
+                    for rp in recentPost{
+                        if index == 1{
+                            titleString = rp["text"] as! String
+                            detailString = rp["recipe"] as! String
+                            self.recentPostCell1Title.text = titleString
+                            self.recentPostCell1Detail.text = detailString
+                        }else if index == 2{
+                            titleString = rp["text"] as! String
+                            detailString = rp["recipe"] as! String
+                            self.recentPostCell2Title.text = titleString
+                            self.recentPostCell2Detail.text = detailString
+                            print(titleString)
+                        }else if index == 3{
+                            titleString = rp["text"] as! String
+                            detailString = rp["recipe"] as! String
+                            self.recentPostCell3Title.text = titleString
+                            self.recentPostCell3Detail.text = detailString
+                        }else{
+                            break;
+                        }
+                        index = index + 1
+                    }
                 }
             }
         }
         
-        
-        
-        
-        
     }
+    
+    
+    
+    
+    
+    
     @IBAction func followAction(sender: AnyObject) {
         let followQuery = PFQuery(className: "FollowRelation")
         followQuery.whereKey("User", equalTo: PFUser.currentUser())
