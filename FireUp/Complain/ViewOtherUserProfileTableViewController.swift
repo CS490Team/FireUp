@@ -14,6 +14,14 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
     @IBOutlet var usernameTextField: UITextField!
     @IBOutlet var followButton: UIButton!
     
+    @IBOutlet var recentPostCell1Title: UITextField!
+    @IBOutlet var recentPostCell2Title: UITextField!
+    @IBOutlet var recentPostCell3Title: UITextField!
+    
+    @IBOutlet var recentPostCell1Detail: UITextField!
+    @IBOutlet var recentPostCell2Detail: UITextField!
+    @IBOutlet var recentPostCell3Detail: UITextField!
+    
     @IBOutlet var totalPostTextfield: UITextField!
     @IBOutlet var followerTextField: UITextField!
     @IBOutlet var userDataCell: UITableViewCell!
@@ -26,6 +34,12 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
         usernameTextField.enabled  = false
         totalPostTextfield.enabled = false
         followerTextField.enabled = false
+        recentPostCell3Detail.enabled = false
+        recentPostCell2Detail.enabled = false
+        recentPostCell1Detail.enabled = false
+        recentPostCell3Title.enabled = false
+        recentPostCell2Title.enabled = false
+        recentPostCell1Title.enabled = false
         usernameTextField.text = TRUsername
         let usernameQuery = PFQuery(className: "_User")
         usernameQuery.whereKey("username", equalTo: TRUsername)
@@ -57,6 +71,24 @@ class ViewOtherUserProfileTableViewController: UITableViewController {
                 }
             }
         }
+        
+        let feedQuery = PFQuery(className: "feed")
+        feedQuery.whereKey("feeder", equalTo: targetUser)
+        feedQuery.orderByAscending("createdAt")
+        feedQuery.includeKey("recipe")
+        feedQuery.findObjectsInBackgroundWithBlock { (results:[AnyObject]!, error: NSError!) -> Void in
+            if error == nil{
+                if results.count > 0{
+                        
+                        print(results)
+                
+                }
+            }
+        }
+        
+        
+        
+        
         
     }
     @IBAction func followAction(sender: AnyObject) {
